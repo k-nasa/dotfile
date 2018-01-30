@@ -19,6 +19,9 @@ hook_source = '''
     let g:deoplete#sources#go#gocode_binary = $GOPATH . '/bin/gocode'
 '''
 
+#行末の半角スペースを可視化FixWhitespaceで削除
+repo = 'bronson/vim-trailing-whitespace'
+
 #elixir用プラグイン
 [[plugins]]
 repo = "elixir-editors/vim-elixir"

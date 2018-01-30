@@ -14,7 +14,7 @@ nmap k <Plug>(accelerated_jk_gk)
 " insertモードから抜ける
 inoremap <silent> jj <ESC>
 
-inoremap <silent><C-y><C-y> <C-y>, 
+inoremap <silent><C-y><C-y> <C-y>,
 
 set tabstop=2
 set shiftwidth=2
@@ -50,6 +50,9 @@ noremap <Right> <Nop>
 
 "NERDTreeをctrl+tで開く
 nnoremap <silent><C-t> :NERDTreeToggle<CR>
+
+"余分な空白削除
+autocmd BufWritePre * :FixWhitespace
 
 " 対応括弧の表示秒数を3秒にする
 set matchtime=3
