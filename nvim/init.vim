@@ -1,6 +1,10 @@
 " 行数
 set number
 
+" ノーマルモード時だけ ; と : を入れ替える
+nnoremap ; :
+nnoremap : ;
+
 set mouse=a
 
 " for accelerated-jk
