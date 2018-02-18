@@ -22,6 +22,9 @@ set expandtab
 "スワップファイルを作らない
 set noswapfile
 
+"折りたたみ設定
+set foldmethod=manual
+
 " for deoplete.vim
 " 一つ目の候補を選択状態にする
 set completeopt+=noinsert
