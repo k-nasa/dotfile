@@ -3,10 +3,12 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
+export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH=$HOME/.composer/vendor/bin:$PATH
-# PostgreSQL設定（DBの置き場所）
+export GOPATH=$HOME/.go
 export PGDATA=/usr/local/var/postgres
 # Source Prezto.
+eval "$(rbenv init -)"
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi

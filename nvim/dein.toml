@@ -7,17 +7,16 @@ repo = 'Shougo/vimproc.vim'
 
 #golagのためのプラグイン
 [[plugins]]
-on_ft = 'go'
 repo = 'fatih/vim-go'
 
-[[plugins]]
-repo = 'zchee/deoplete-go'
-build = 'make'
-on_ft = 'go'
-depends = ['deoplete.nvim']
-hook_source = '''
-    let g:deoplete#sources#go#gocode_binary = $GOPATH . '/bin/gocode'
-'''
+# [[plugins]]
+# repo = 'zchee/deoplete-go'
+# build = 'make'
+# on_ft = 'go'
+# depends = ['deoplete.nvim']
+# hook_source = '''
+#     let g:deoplete#sources#go#gocode_binary = $GOPATH . '/bin/gocode'
+# '''
 
 #行末の半角スペースを可視化FixWhitespaceで削除
 repo = 'bronson/vim-trailing-whitespace'
@@ -58,8 +57,8 @@ repo = 'dag/vim2hs'
 #マークダウン用プラグイン
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
-[[plugins]]
-repo = 'kannokanno/previm'
+# [[plugins]]
+# repo = 'kannokanno/previm'
 [[plugins]]
 repo = 'tyru/open-browser.vim'
 
