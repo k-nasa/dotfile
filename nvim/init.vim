@@ -22,6 +22,9 @@ set expandtab
 "スワップファイルを作らない
 set noswapfile
 
+"Gstatusなどを縦画面で分割する
+set diffopt+=vertical
+
 " for deoplete.vim
 " 一つ目の候補を選択状態にする
 set completeopt+=noinsert

@@ -19,17 +19,17 @@ function mkcd() {
 }
 
 function push(){
-  echo  "Please enter the commit message for your changes." 
+  echo  "Please enter the commit message for your changes."
   read msg
-  git add . 
+  git add .
   git commit -m "$msg"
-  git push 
+  git push
 }
 
 function deploy(){
-  echo  "Please enter the commit message for your changes." 
+  echo  "Please enter the commit message for your changes."
   read msg
-  git add . 
+  git add .
   git commit -m "$msg"
   git push heroku master
 }
@@ -39,12 +39,23 @@ function deploy(){
 alias vim='nvim'
 alias -s rb='ruby'
 alias -s py='python'
-alias vimc='vim ~/.config/nvim/init.vim' 
+alias vimc='vim ~/.config/nvim/init.vim'
 alias vimp='vim ~/.config/nvim/dein.toml'
 alias mkcd=mkcd #mkdirとcdを一括で行う
 alias push=push
 alias deploy=deploy
-
 alias vi="nvim"
+
+#git関係のエイリアス
+alias g='git'
+alias gl='git log --oneline -10'
+alias gs='git status'
+alias ga='git add'
+alias gc='git checkout'
+alias gb='git branch'
+
+
  #Customize to your needs...
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
