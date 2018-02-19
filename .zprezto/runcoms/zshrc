@@ -53,7 +53,8 @@ alias g='git'
 alias gl='git log --oneline -10'
 alias gs='git status'
 alias ga='git add'
-alias gc='git checkout'
+alias gch='git checkout'
+alias gc='git commit'
 alias gb='git branch'
 
 
