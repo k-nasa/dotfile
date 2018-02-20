@@ -1,4 +1,4 @@
-" 行数
+"  行数
 set number
 
 " ノーマルモード時だけ ; と : を入れ替える
@@ -74,6 +74,14 @@ nnoremap sk <C-w>k
 nnoremap sl <C-w>l
 nnoremap sh <C-w>h
 nnoremap tt :tabe<CR>
+
+"alias色々
+"Space t でタブ移動
+nnoremap <Space>t gt
+" <Space>i でコードをインデント整形
+nnoremap <Space>i gg=<S-g><C-o><C-o>zzk
+" <Space>co で1行コメントアウト
+nnoremap <Space>co :TComment<CR>
 
 
 "unit.vimの設定
