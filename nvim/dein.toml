@@ -138,4 +138,3 @@ on_ft = ['ruby']
 #vimないでgitを使うためのプラグイン
 [[plugins]]
 repo = 'tpope/vim-fugitive'
-

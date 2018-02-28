@@ -22,7 +22,6 @@ set expandtab
 "スワップファイルを作らない
 set noswapfile
 
-
 " for deoplete.vim
 " 一つ目の候補を選択状態にする
 set completeopt+=noinsert
@@ -46,8 +45,6 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
-
-
 
 "NERDTreeをctrl+tで開く
 nnoremap <silent><C-t> :NERDTreeToggle<CR>
@@ -83,6 +80,9 @@ nnoremap <Space>i gg=<S-g><C-o><C-o>zzk
 " <Space>co で1行コメントアウト
 nnoremap <Space>co :TComment<CR>
 
+:command Ga Gwrite
+:command Gs Gstatus
+
 
 "unit.vimの設定
 noremap ff :Unite -buffer-name=file file<CR> " ファイル一覧
@@ -98,6 +98,15 @@ noremap rr :Unite rails/route<cr>
 "markdown
 nnoremap <C-P> :PrevimOpen<CR>
 
+"保存時にslimの構文チェック(要slim_lintのインストール)
+function! SlimLint()
+  let slim_lint = "slim-lint"
+  silent cexpr system(slim_lint . " " . shellescape(expand('%')))
+  copen
+endfunction
+
+"augroupで適当にくくったほうがいい
+autocmd BufWritePost *.slim call SlimLint()
 
 " プラグインがインストールされるディレクトリ
 let s:dein_dir = expand('~/.cache/dein')
