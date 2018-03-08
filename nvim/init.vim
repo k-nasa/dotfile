@@ -65,7 +65,8 @@ set wrap
 set virtualedit=block
 
 "画面分割
-nnoremap ss :vs<CR>
+nnoremap ss :sp<CR>
+nnoremap sv :vs<CR>
 nnoremap sj <C-w>j
 nnoremap sk <C-w>k
 nnoremap sl <C-w>l
@@ -107,6 +108,8 @@ endfunction
 
 "augroupで適当にくくったほうがいい
 autocmd BufWritePost *.slim call SlimLint()
+
+set diffopt+=vertical
 
 " プラグインがインストールされるディレクトリ
 let s:dein_dir = expand('~/.cache/dein')
