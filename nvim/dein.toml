@@ -5,6 +5,8 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 
+[[plugins]]
+repo = 'w0rp/ale'
 #golagのためのプラグイン
 [[plugins]]
 repo = 'fatih/vim-go'

@@ -64,6 +64,9 @@ set wrap
 "文字のないところにカーソル移動できるようにする"
 set virtualedit=block
 
+" 構文チェックプラグイン ALE関係の設定
+let g:ale_lint_on_enter = 0
+
 "画面分割
 nnoremap ss :sp<CR>
 nnoremap sv :vs<CR>
