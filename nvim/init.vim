@@ -1,10 +1,6 @@
 "  行数
 set number
 
-" ノーマルモード時だけ ; と : を入れ替える
-nnoremap ; :
-nnoremap : ;
-
 set mouse=a
 
 " for accelerated-jk
@@ -101,16 +97,6 @@ noremap rr :Unite rails/route<cr>
 
 "markdown
 nnoremap <C-P> :PrevimOpen<CR>
-
-"保存時にslimの構文チェック(要slim_lintのインストール)
-function! SlimLint()
-  let slim_lint = "slim-lint"
-  silent cexpr system(slim_lint . " " . shellescape(expand('%')))
-  copen
-endfunction
-
-"augroupで適当にくくったほうがいい
-autocmd BufWritePost *.slim call SlimLint()
 
 set diffopt+=vertical
 
