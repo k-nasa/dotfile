@@ -7,7 +7,6 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH=$HOME/.composer/vendor/bin:$PATH
 export GOPATH=$HOME/.go
 export PGDATA=/usr/local/var/postgres
-function git(){hub "$@"} # zsh
 # Source Prezto.
 eval "$(rbenv init -)"
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then

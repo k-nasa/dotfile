@@ -1,7 +1,12 @@
 "  行数
 set number
 
+"ノーマルモード時にコロンとセミコロンを入れ替える
+nnoremap ; :
+nnoremap : ;
 set mouse=a
+
+imap >> \|><Space>
 
 " for accelerated-jk
 nmap j <Plug>(accelerated_jk_gj)
