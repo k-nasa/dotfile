@@ -17,6 +17,7 @@ inoremap <silent> jj <ESC>
 
 inoremap <silent><C-y><C-y> <C-y>,
 
+"タブをスペースに
 set tabstop=2
 set shiftwidth=2
 set expandtab
