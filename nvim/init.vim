@@ -34,8 +34,10 @@ set completeopt+=noinsert
 let g:deoplete#enable_at_startup = 1
 "htmlのタグ閉じ
 let g:loadedInsertTag = 1
-".jsxだけではなく、.jsファイルにもシンタックスを有効
-let g:jsx_ext_required = 0
+
+" ".jsxだけではなく、.jsファイルにもシンタックスを有効
+" let g:jsx_ext_required = 1
+
 "上８行を確保
 set scrolloff=8
 
@@ -69,13 +71,8 @@ set wrap
 set virtualedit=block
 
 " 構文チェックプラグイン ALE関係の設定
-let g:ale_lint_on_enter = 0
-augroup FiletypeGroup
-    autocmd!
-    au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
-augroup END
-let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
-let g:ale_linter_aliases = {'jsx': 'css'}
+let g:ale_lint_on_enter = 1
+
 
 "画面分割
 nnoremap ss :sp<CR>
@@ -158,5 +155,3 @@ endif
 if dein#check_install()
   call dein#install()
 endif
-
-
