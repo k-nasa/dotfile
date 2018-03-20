@@ -1,12 +1,14 @@
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
 export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 export PATH=$HOME/.composer/vendor/bin:$PATH
 export GOPATH=$HOME/.go
 export PGDATA=/usr/local/var/postgres
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=./bin:$PATH
+eval "$(direnv hook zsh)"
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
 # Source Prezto.
 eval "$(rbenv init -)"
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -57,9 +59,3 @@ alias gch='git checkout'
 alias gc='git commit'
 alias gb='git branch'
 alias gcp='git cherry-pick'
-
-
- #Customize to your needs...
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
