@@ -4,6 +4,7 @@ set number
 "ノーマルモード時にコロンとセミコロンを入れ替える
 nnoremap ; :
 nnoremap : ;
+
 set mouse=a
 
 imap >> \|><Space>
@@ -38,6 +39,13 @@ let g:loadedInsertTag = 1
 " ".jsxだけではなく、.jsファイルにもシンタックスを有効
 " let g:jsx_ext_required = 1
 
+"ダグジャンプ用設定 --------------
+set fileformats=unix,dos,mac
+set fileencodings=utf-8,sjis
+" tagsジャンプの時に複数ある時は一覧表示
+nnoremap <C-]> g<C-]>
+"----------------------------------
+
 "上８行を確保
 set scrolloff=8
 
@@ -52,8 +60,6 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-"NERDTreeをctrl+tで開く
-nnoremap <silent><C-t> :NERDTreeToggle<CR>
 
 "余分な空白削除
 autocmd BufWritePre * :FixWhitespace
@@ -74,7 +80,7 @@ set virtualedit=block
 let g:ale_lint_on_enter = 1
 
 
-"画面分割
+"画面分割--------------------
 nnoremap ss :sp<CR>
 nnoremap sv :vs<CR>
 nnoremap sj <C-w>j
@@ -82,20 +88,23 @@ nnoremap sk <C-w>k
 nnoremap sl <C-w>l
 nnoremap sh <C-w>h
 nnoremap tt :tabe<CR>
+"---------------------------
 
-"alias色々
+
+"alias色々 -------------------
 "Space t でタブ移動
 nnoremap <Space>t gt
 " <Space>i でコードをインデント整形
 nnoremap <Space>i gg=<S-g><C-o><C-o>zzk
-" <Space>co で1行コメントアウト
-nnoremap <Space>co :TComment<CR>
+"NERDTreeをctrl+tで開く
+nnoremap <silent><C-t> :NERDTreeToggle<CR>
 
 :command Ga Gwrite
 :command Gs Gstatus
+"------------------------------
 
 
-"unit.vimの設定
+"unit.vimの設定 ------------------------------------------------
 noremap ff :Unite -buffer-name=file file<CR> " ファイル一覧
 noremap fr :Unite file_mru<CR> " 最近使ったファイル一覧
 
@@ -105,6 +114,8 @@ noremap rm :Unite rails/model<cr>
 noremap rc :Unite rails/controller<cr>
 noremap rv :Unite rails/view<cr>
 noremap rr :Unite rails/route<cr>
+"---------------------------------------------------------------
+
 
 "markdown
 nnoremap <C-P> :PrevimOpen<CR>
@@ -118,13 +129,14 @@ let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
 
-" dein.vim がなければ github から落としてくる
+" dein.vim がなければ github から落としてくる ----------------------
 if &runtimepath !~# '/dein.vim'
   if !isdirectory(s:dein_repo_dir)
     execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
   endif
   execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
+"--------------------------------------------------------------------
 
 
 " 設定開始
