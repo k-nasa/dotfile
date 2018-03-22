@@ -13,8 +13,6 @@ imap >> \|><Space>
 nmap j <Plug>(accelerated_jk_gj)
 nmap k <Plug>(accelerated_jk_gk)
 
-nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
-nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
 
 " insertモードから抜ける
 inoremap <silent> jj <ESC>
@@ -44,6 +42,9 @@ set fileformats=unix,dos,mac
 set fileencodings=utf-8,sjis
 " tagsジャンプの時に複数ある時は一覧表示
 nnoremap <C-]> g<C-]>
+
+nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
+nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
 "----------------------------------
 
 "上８行を確保
