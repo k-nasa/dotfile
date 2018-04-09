@@ -51,6 +51,11 @@ alias push=push
 alias deploy=deploy
 alias vi="nvim"
 
+# ghc
+alias ghci='stack ghci'
+alias ghc='stack ghc --'
+alias runghc='stack runghc --'
+
 #git関係のエイリアス
 alias g='git'
 alias gl='git log --oneline -10'

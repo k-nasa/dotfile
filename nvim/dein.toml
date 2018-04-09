@@ -11,6 +11,10 @@ repo = 'w0rp/ale'
 [[plugins]]
 repo = 'fatih/vim-go'
 
+#clangのためのプラグイン
+[[plugins]]
+repo = 'vim-jp/cpp-vim'
+
 # [[plugins]]
 # repo = 'zchee/deoplete-go'
 # build = 'make'
@@ -30,6 +34,10 @@ repo = "elixir-editors/vim-elixir"
 [[plugins]]
 repo = 'fishbullet/deoplete-ruby'
 
+#haskell
+[[plugins]]
+repo = 'kana/vim-filetype-haskell'
+
 #Rails用
 [[plugins]]
 repo = "tpope/vim-rails"
@@ -45,6 +53,10 @@ repo = "gko/vim-coloresque"
 repo = 'pangloss/vim-javascript'
 [[plugins]]
 repo = 'mxw/vim-jsx'
+
+# vue.js用
+[[plugins]]
+repo = 'posva/vim-vue'
 #html
 [[plugins]]
 repo = 'rchaser53/insertclosetag'
