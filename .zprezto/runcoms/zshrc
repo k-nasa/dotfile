@@ -6,7 +6,7 @@ export PGDATA=/usr/local/var/postgres
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=./bin:$PATH
-# eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh)"
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 eval `ssh-agent`
 

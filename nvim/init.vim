@@ -19,8 +19,8 @@ inoremap <silent> jj <ESC>
 
 inoremap <silent><C-y><C-y> <C-y>,
 
-" コンマの後に自動的にスペースを挿入
-inoremap , ,<Space>
+" " コンマの後に自動的にスペースを挿入
+" inoremap , ,<Space>
 
 "タブをスペースに
 set tabstop=2
