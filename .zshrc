@@ -60,15 +60,15 @@ alias ghci='stack ghci'
 alias ghc='stack ghc --'
 alias runghc='stack runghc --'
 
-#git関係のエイリアス
-alias g='git'
-alias gl='git log --oneline -10'
-alias gs='git status'
-alias ga='git add'
-alias gch='git checkout'
-alias gc='git commit'
-alias gb='git branch'
-alias gcp='git cherry-pick'
+# #git関係のエイリアス
+# alias g='git'
+# alias gl='git log --oneline -10'
+# alias gs='git status'
+# alias ga='git add'
+# alias gch='git checkout'
+# alias gc='git commit'
+# alias gb='git branch'
+# alias gcp='git cherry-pick'
 
 # 以下zplug---------------------------------------------
 if [[ ! -d ~/.zplug ]];then
