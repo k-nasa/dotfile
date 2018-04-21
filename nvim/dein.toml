@@ -36,7 +36,7 @@ repo = 'fishbullet/deoplete-ruby'
 
 #haskell
 [[plugins]]
-repo = 'kana/vim-filetype-haskell'
+repo = 'neovimhaskell/haskell-vim'
 
 #Rails用
 [[plugins]]
