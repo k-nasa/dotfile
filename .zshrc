@@ -61,15 +61,15 @@ alias ghci='stack ghci'
 alias ghc='stack ghc --'
 alias runghc='stack runghc --'
 
-# #git関係のエイリアス
-# alias g='git'
-# alias gl='git log --oneline -10'
-# alias gs='git status'
-# alias ga='git add'
-# alias gch='git checkout'
-# alias gc='git commit'
-# alias gb='git branch'
-# alias gcp='git cherry-pick'
+#git関係のエイリアス
+alias g='git'
+alias gl='git log --oneline -10'
+alias gs='git status'
+alias ga='git add'
+alias gch='git checkout'
+alias gc='git commit'
+alias gb='git branch'
+alias gcp='git cherry-pick'
 
 # 以下zplug---------------------------------------------
 if [[ ! -d ~/.zplug ]];then
@@ -87,6 +87,8 @@ zplug "yous/vanilli.sh"
 
 # Additional completion definitions for Zsh
 zplug "zsh-users/zsh-completions"
+# compinit 以降に読み込むようにロードの優先度を変更する
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # Load the theme.
 zplug mafredri/zsh-async, from:github
