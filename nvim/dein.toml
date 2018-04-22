@@ -7,9 +7,6 @@ repo = 'Shougo/vimproc.vim'
 
 [[plugins]]
 repo = 'w0rp/ale'
-#golagのためのプラグイン
-[[plugins]]
-repo = 'fatih/vim-go'
 
 #clangのためのプラグイン
 [[plugins]]
@@ -27,9 +24,6 @@ repo = 'vim-jp/cpp-vim'
 #行末の半角スペースを可視化FixWhitespaceで削除
 repo = 'bronson/vim-trailing-whitespace'
 
-#elixir用プラグイン
-[[plugins]]
-repo = "elixir-editors/vim-elixir"
 #ruby用
 [[plugins]]
 repo = 'fishbullet/deoplete-ruby'
@@ -67,14 +61,6 @@ repo =  'othree/html5.vim'
 repo = 'ujihisa/neco-ghc'
 [[plugins]]
 repo = 'dag/vim2hs'
-
-#マークダウン用プラグイン
-[[plugins]]
-repo = 'plasticboy/vim-markdown'
-# [[plugins]]
-# repo = 'kannokanno/previm'
-[[plugins]]
-repo = 'tyru/open-browser.vim'
 
 #カラースキーム
 [[plugins]]

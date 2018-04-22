@@ -96,8 +96,10 @@ nnoremap tt :tabe<CR>
 
 
 "alias色々 -------------------
-"Space t でタブ移動
-nnoremap <Space>t gt
+"タブ移動
+nnoremap <C-n> gt
+nnoremap <C-p> gT
+
 " <Space>i でコードをインデント整形
 nnoremap <Space>i gg=<S-g><C-o><C-o>zzk
 "NERDTreeをctrl+tで開く

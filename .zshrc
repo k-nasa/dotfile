@@ -10,11 +10,12 @@ eval "$(direnv hook zsh)"
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 eval `ssh-agent`
 
-# Source Prezto.
-eval "$(rbenv init -)"
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+# # Source Prezto.
+# eval "$(rbenv init -)"
+# if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+#   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# fi
+
 export XDG_CONFIG_HOME=~/.config
 
 #エイリアス用の関数定義
@@ -91,21 +92,6 @@ zplug "zsh-users/zsh-completions"
 zplug mafredri/zsh-async, from:github
 zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
 
-# Syntax highlighting bundle. zsh-syntax-highlighting must be loaded after
-# excuting compinit command and sourcing other plugins.
-zplug "zsh-users/zsh-syntax-highlighting", nice:9
-
-# ZSH port of Fish shell's history search feature
-zplug "zsh-users/zsh-history-substring-search", nice:10
-
-# Tracks your most used directories, based on 'frecency'.
-zplug "rupa/z", use:"*.sh"
-
-# A next-generation cd command with an interactive filter
-zplug "b4b4r07/enhancd", use:init.sh
-
-# This plugin adds many useful aliases and functions.
-zplug "plugins/git",   from:oh-my-zsh
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -129,22 +115,6 @@ fi
 
 # Add color to ls command
 export CLICOLOR=1
-
-# NeoVim config
-#export XDG_CONFIG_HOME=$HOME/.xdgconfig
-
-# Load rbenv
-if [ -e "$HOME/.rbenv" ]; then
-  eval "$(rbenv init - zsh)"
-fi
-
-# Set GOPATH for Go
-if command -v go &> /dev/null; then
-  [ -d "$HOME/go" ] || mkdir "$HOME/go"
-  export GOPATH="$HOME/go"
-  export GOROOT=/usr/local/opt/go/libexec
-  export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
-fi
 
 # Set PATH for GAE
 export PATH=$HOME/go/appengine:$PATH
