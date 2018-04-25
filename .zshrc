@@ -10,12 +10,6 @@ eval "$(direnv hook zsh)"
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 eval `ssh-agent`
 
-# # Source Prezto.
-# eval "$(rbenv init -)"
-# if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-#   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-# fi
-
 export XDG_CONFIG_HOME=~/.config
 
 #エイリアス用の関数定義
