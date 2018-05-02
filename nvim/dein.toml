@@ -31,6 +31,8 @@ repo = 'fishbullet/deoplete-ruby'
 #haskell
 [[plugins]]
 repo = 'neovimhaskell/haskell-vim'
+[[plugins]]
+repo = 'ujihisa/neco-ghc'
 
 #Rails用
 [[plugins]]
@@ -56,11 +58,11 @@ repo = 'posva/vim-vue'
 repo = 'rchaser53/insertclosetag'
 [[plugins]]
 repo =  'othree/html5.vim'
-#Haskell用
-[[plugins]]
-repo = 'ujihisa/neco-ghc'
-[[plugins]]
-repo = 'dag/vim2hs'
+# #Haskell用
+# [[plugins]]
+# repo = 'ujihisa/neco-ghc'
+# [[plugins]]
+# repo = 'dag/vim2hs'
 
 #カラースキーム
 [[plugins]]

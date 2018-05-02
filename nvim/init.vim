@@ -37,6 +37,8 @@ let g:deoplete#enable_at_startup = 1
 "htmlのタグ閉じ
 let g:loadedInsertTag = 1
 
+set formatprg=stylish-haskell
+
 " ".jsxだけではなく、.jsファイルにもシンタックスを有効
 " let g:jsx_ext_required = 1
 
