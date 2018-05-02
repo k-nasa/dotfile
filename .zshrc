@@ -6,6 +6,7 @@ export PGDATA=/usr/local/var/postgres
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=./bin:$PATH
+export PATH=$PATH:path/to/installed/dart/bin
 eval "$(direnv hook zsh)"
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 eval `ssh-agent`
