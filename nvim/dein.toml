@@ -12,6 +12,10 @@ repo = 'w0rp/ale'
 [[plugins]]
 repo = 'vim-jp/cpp-vim'
 
+# Dart
+[[plugins]]
+repo = 'dart-lang/dart-vim-plugin'
+
 # [[plugins]]
 # repo = 'zchee/deoplete-go'
 # build = 'make'
