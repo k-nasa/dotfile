@@ -85,6 +85,8 @@ zplug "yous/vanilli.sh"
 zplug "zsh-users/zsh-completions"
 # compinit 以降に読み込むようにロードの優先度を変更する
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+# 入力補完
+zplug "zsh-users/zsh-autosuggestions", defer:2
 
 # Load the theme.
 zplug mafredri/zsh-async, from:github
