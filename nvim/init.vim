@@ -7,8 +7,6 @@ nnoremap : ;
 
 set mouse=a
 
-imap >> \|><Space>
-
 " for accelerated-jk
 nmap j <Plug>(accelerated_jk_gj)
 nmap k <Plug>(accelerated_jk_gk)
@@ -19,9 +17,6 @@ inoremap <silent> jj <ESC>
 
 inoremap <silent><C-y><C-y> <C-y>,
 
-" " コンマの後に自動的にスペースを挿入
-" inoremap , ,<Space>
-
 "タブをスペースに
 set tabstop=2
 set shiftwidth=2
@@ -30,17 +25,16 @@ set expandtab
 set noswapfile
 
 " for deoplete.vim
-" 一つ目の候補を選択状態にする
-set completeopt+=noinsert
+" " 一つ目の候補を選択状態にする
+" set completeopt+=noinsert
 "補完を使う
 let g:deoplete#enable_at_startup = 1
+
 "htmlのタグ閉じ
 let g:loadedInsertTag = 1
 
 set formatprg=stylish-haskell
 
-" ".jsxだけではなく、.jsファイルにもシンタックスを有効
-" let g:jsx_ext_required = 1
 
 "ダグジャンプ用設定 --------------
 set fileformats=unix,dos,mac
@@ -61,11 +55,11 @@ set t_Co=256
 colorscheme lucius
 set background=dark
 
+" 矢印キーでの移動を禁ずる！
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
-
 
 "余分な空白削除
 autocmd BufWritePre * :FixWhitespace
@@ -98,10 +92,6 @@ nnoremap tt :tabe<CR>
 
 
 "alias色々 -------------------
-"タブ移動
-nnoremap <C-n> gt
-nnoremap <C-p> gT
-
 " <Space>i でコードをインデント整形
 nnoremap <Space>i gg=<S-g><C-o><C-o>zzk
 "NERDTreeをctrl+tで開く

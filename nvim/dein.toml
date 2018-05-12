@@ -1,12 +1,60 @@
-# Required:
+# ===========================================================
+# core plugins
+# これがないと悲しくなるやつ
+# ===========================================================
+
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 
+# 非同期シンタックスチェック
 [[plugins]]
 repo = 'w0rp/ale'
+hook_add = 'call hook#ale#load()'
+
+# コードの自動補完
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_i = 1
+hook_add = 'let g:deoplete#enable_at_startup = 1'
+
+# =====================================================
+# lnagage server client
+# =====================================================
+[[plugins]]
+repo             = 'autozimu/LanguageClient-neovim'
+rev              = 'next'
+# プラグインが読み込まれる際に呼び出されるコールバック
+depends = 'deoplete.nvim'
+on_ft = ['ruby']
+build = './install.sh'
+hook_add         = 'call hook#language_client_neovim#load()'
+
+
+# なんであるのかあんまり覚えてないやつ -------------------
+# vim8でdeopleteを使うのに必要
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+on_ft = ['ruby']
+
+# vim8でdeopleteを使うのに必要
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+on_ft = ['ruby']
+
+
+[[plugins]]
+repo ='Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+# --------------------------------------------------------
 
 #clangのためのプラグイン
 [[plugins]]
@@ -16,21 +64,23 @@ repo = 'vim-jp/cpp-vim'
 [[plugins]]
 repo = 'dart-lang/dart-vim-plugin'
 
-# [[plugins]]
-# repo = 'zchee/deoplete-go'
-# build = 'make'
-# on_ft = 'go'
-# depends = ['deoplete.nvim']
-# hook_source = '''
-#     let g:deoplete#sources#go#gocode_binary = $GOPATH . '/bin/gocode'
-# '''
-
 #行末の半角スペースを可視化FixWhitespaceで削除
 repo = 'bronson/vim-trailing-whitespace'
 
 #ruby用
 [[plugins]]
 repo = 'fishbullet/deoplete-ruby'
+# endを自動で入れてくれるやる
+[[plugins]]
+repo = 'tpope/vim-endwise'
+
+#Rails用
+[[plugins]]
+repo = "tpope/vim-rails"
+[[plugins]]
+repo ="basyura/unite-rails"
+[[plugins]]
+repo = 'slim-template/vim-slim'
 
 #haskell
 [[plugins]]
@@ -38,15 +88,12 @@ repo = 'neovimhaskell/haskell-vim'
 [[plugins]]
 repo = 'ujihisa/neco-ghc'
 
-#Rails用
-[[plugins]]
-repo = "tpope/vim-rails"
-[[plugins]]
-repo ="basyura/unite-rails"
 
 #css用
 [[plugins]]
 repo = "gko/vim-coloresque"
+[[plugins]]
+repo = 'AtsushiM/sass-compile.vim'
 
 #js用
 [[plugins]]
@@ -62,31 +109,23 @@ repo = 'posva/vim-vue'
 repo = 'rchaser53/insertclosetag'
 [[plugins]]
 repo =  'othree/html5.vim'
-# #Haskell用
-# [[plugins]]
-# repo = 'ujihisa/neco-ghc'
-# [[plugins]]
-# repo = 'dag/vim2hs'
+
+#emmet-vim htmlが楽に書けるやつ
+[[plugins]]
+repo = 'mattn/emmet-vim'
 
 #カラースキーム
 [[plugins]]
 repo = 'tomasr/molokai'
 
-#emmet-vim
-[[plugins]]
-repo = 'mattn/emmet-vim'
-
+# ファイルツリーのやつ
 [[plugins]]
 repo = 'scrooloose/nerdtree'
-
+# ファイラー
 [[plugins]]
-repo = 'tpope/vim-endwise'
+repo ='Shougo/unite.vim'
 
-[[plugins]]
-repo = 'slim-template/vim-slim'
 
-[[plugins]]
-repo = 'AtsushiM/sass-compile.vim'
 #vimの行横に+や-で差分を表示してくれる．
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
@@ -95,10 +134,19 @@ repo = 'airblade/vim-gitgutter'
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
 
-#画面サイズを簡単に変える ctrl+eで起動
+# インデントを可視化
 [[plugins]]
-repo = 'simeji/winresizer'
+repo = 'Yggdroot/indentLine'
 
+# j, k移動高速化
+[[plugins]]
+repo = 'rhysd/accelerated-jk'
+
+#vimないでgitを使うためのプラグイン
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+# 下のラインをカスタマイズするやつ
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
@@ -125,45 +173,3 @@ hook_add = '''
 	" # hide --INSERT--
 	set noshowmode
 '''
-# インデントを可視化
-[[plugins]]
-repo = 'Yggdroot/indentLine'
-
-
-# j, k移動高速化
-[[plugins]]
-repo = 'rhysd/accelerated-jk'
-
-#
-[[plugins]]
-repo ='Shougo/unite.vim'
-
-[[plugins]]
-repo ='Shougo/neomru.vim'
-
-[[plugins]]
-repo = 'cohama/lexima.vim'
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-
-
-# コードの自動補完
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-on_i = 1
-hook_add = 'let g:deoplete#enable_at_startup = 1'
-
-# vim8でdeopleteを使うのに必要
-[[plugins]]
-repo = 'roxma/nvim-yarp'
-on_ft = ['ruby']
-
-# vim8でdeopleteを使うのに必要
-[[plugins]]
-repo = 'roxma/vim-hug-neovim-rpc'
-on_ft = ['ruby']
-
-#vimないでgitを使うためのプラグイン
-[[plugins]]
-repo = 'tpope/vim-fugitive'
