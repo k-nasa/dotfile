@@ -26,7 +26,7 @@ set noswapfile
 
 " for deoplete.vim
 " " 一つ目の候補を選択状態にする
-" set completeopt+=noinsert
+set completeopt+=noinsert
 "補完を使う
 let g:deoplete#enable_at_startup = 1
 
@@ -40,7 +40,7 @@ set formatprg=stylish-haskell
 set fileformats=unix,dos,mac
 set fileencodings=utf-8,sjis
 " tagsジャンプの時に複数ある時は一覧表示
-nnoremap <C-]> g<C-]>
+nnoremap <C-j> g<C-]>
 
 nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
 nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
