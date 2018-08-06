@@ -5,6 +5,12 @@ set number
 nnoremap ; :
 nnoremap : ;
 
+"=================
+"filetype
+"=================
+filetype on
+au BufNewFile,BufRead *.dart :set filetype=dart
+
 set mouse=a
 
 " for accelerated-jk
@@ -25,7 +31,7 @@ set expandtab
 set noswapfile
 
 " for deoplete.vim
-" " 一つ目の候補を選択状態にする
+" 一つ目の候補を選択状態にする
 set completeopt+=noinsert
 "補完を使う
 let g:deoplete#enable_at_startup = 1
@@ -153,6 +159,7 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
   " call dein#add('slim-template/vim-slim')
+  call dein#add('dart-lang/dart-vim-plugin')
   " 設定終了
   call dein#end()
 

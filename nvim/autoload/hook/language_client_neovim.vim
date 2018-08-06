@@ -6,6 +6,7 @@ function! hook#language_client_neovim#load() abort
   let g:LanguageClient_serverCommands = {
         \ 'ruby': ['language_server-ruby'],
         \ 'haskell': ['hie', '--lsp'],
+        \ 'dart': ['dart_language_server'],
         \ }
 
   " キーマップ
