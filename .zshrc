@@ -12,6 +12,7 @@ export PATH=$HOME/flutter/bin:$PATH
 export PATH="$PATH":"~/.pub-cache/bin"
 export XDG_CONFIG_HOME=~/.config
 export PATH="$PATH:/Users/asan/.cargo/bin"
+export PATH=$GOPATH/bin:$PATH
 
 eval "$(direnv hook zsh)"
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
@@ -125,3 +126,8 @@ export CLICOLOR=1
 export PATH=$HOME/go/appengine:$PATH
 export PATH=/Users/asan/go/appengine:/Users/asan/.zplug/repos/zplug/zplug/bin:/bin:/Users/asan/flutter/bin:./bin:/Users/asan/.nodebrew/current/bin:/Users/asan/.composer/vendor/bin:/Users/asan/.rbenv/shims:/Users/asan/.rbenv/bin:/usr/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:path/to/installed/dart/bin:/Users/asan/.local/bin:~/.pub-cache/bin
 export PATH=${HOME}/.cargo/bin:${PATH}
+if [ -d "$HOME/.goenv" ]; then
+  export GOENV_ROOT="$HOME/.goenv"
+  export PATH="$GOENV_ROOT/bin:$PATH"
+  which goenv > /dev/null && eval "$(goenv init -)"
+fi
