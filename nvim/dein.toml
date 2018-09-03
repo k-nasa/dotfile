@@ -56,6 +56,12 @@ repo = 'Shougo/neosnippet-snippets'
 
 # --------------------------------------------------------
 
+
+# =====================================================
+# 言語ごとのプラグイン
+# シンタックスハイライト、Linter等
+# =====================================================
+
 #clangのためのプラグイン
 [[plugins]]
 repo = 'vim-jp/cpp-vim'
@@ -66,6 +72,17 @@ repo = 'dart-lang/dart-vim-plugin'
 
 #行末の半角スペースを可視化FixWhitespaceで削除
 repo = 'bronson/vim-trailing-whitespace'
+
+# Rust
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = 'rust'
+hook_source = '''
+    let g:rustfmt_autosave = 1
+'''
+[[plugins]]
+repo = 'sebastianmarkow/deoplete-rust'
+on_ft = 'rust'
 
 #ruby用
 [[plugins]]

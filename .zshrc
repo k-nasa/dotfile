@@ -10,11 +10,14 @@ export PATH=$PATH:path/to/installed/dart/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$HOME/flutter/bin:$PATH
 export PATH="$PATH":"~/.pub-cache/bin"
+export XDG_CONFIG_HOME=~/.config
+export PATH="$PATH:/Users/asan/.cargo/bin"
+
 eval "$(direnv hook zsh)"
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 eval `ssh-agent`
 
-export XDG_CONFIG_HOME=~/.config
+source ~/.cargo/env
 
 #エイリアス用の関数定義
 function mkcd() {
@@ -121,3 +124,4 @@ export CLICOLOR=1
 # Set PATH for GAE
 export PATH=$HOME/go/appengine:$PATH
 export PATH=/Users/asan/go/appengine:/Users/asan/.zplug/repos/zplug/zplug/bin:/bin:/Users/asan/flutter/bin:./bin:/Users/asan/.nodebrew/current/bin:/Users/asan/.composer/vendor/bin:/Users/asan/.rbenv/shims:/Users/asan/.rbenv/bin:/usr/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:path/to/installed/dart/bin:/Users/asan/.local/bin:~/.pub-cache/bin
+export PATH=${HOME}/.cargo/bin:${PATH}

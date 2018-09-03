@@ -39,6 +39,9 @@ let g:deoplete#enable_at_startup = 1
 "htmlのタグ閉じ
 let g:loadedInsertTag = 1
 
+"保存時にrustfmt適用
+let g:rustfmt_autosave = 1
+
 set formatprg=stylish-haskell
 
 

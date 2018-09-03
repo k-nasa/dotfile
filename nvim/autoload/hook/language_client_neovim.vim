@@ -4,6 +4,7 @@ function! hook#language_client_neovim#load() abort
 
   set hidden
   let g:LanguageClient_serverCommands = {
+        \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
         \ 'ruby': ['language_server-ruby'],
         \ 'haskell': ['hie', '--lsp'],
         \ 'dart': ['dart_language_server'],
