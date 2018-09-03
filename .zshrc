@@ -1,8 +1,12 @@
+if [ -d "$HOME/.goenv" ]; then
+  export GOENV_ROOT="$HOME/.goenv"
+  export PATH="$GOENV_ROOT/bin:$PATH"
+  which goenv > /dev/null && eval "$(goenv init -)"
+fi
+
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH=$HOME/.composer/vendor/bin:$PATH
-export GOPATH=$HOME/.go
-export PGDATA=/usr/local/var/postgres
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=./bin:$PATH
@@ -12,7 +16,9 @@ export PATH=$HOME/flutter/bin:$PATH
 export PATH="$PATH":"~/.pub-cache/bin"
 export XDG_CONFIG_HOME=~/.config
 export PATH="$PATH:/Users/asan/.cargo/bin"
-export PATH=$GOPATH/bin:$PATH
+export GOPATH="$HOME/go"
+export PATH=$PATH:$GOPATH/bin
+export GO15VENDOREXPERIMENT=1
 
 eval "$(direnv hook zsh)"
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
@@ -123,11 +129,6 @@ fi
 export CLICOLOR=1
 
 # Set PATH for GAE
-export PATH=$HOME/go/appengine:$PATH
-export PATH=/Users/asan/go/appengine:/Users/asan/.zplug/repos/zplug/zplug/bin:/bin:/Users/asan/flutter/bin:./bin:/Users/asan/.nodebrew/current/bin:/Users/asan/.composer/vendor/bin:/Users/asan/.rbenv/shims:/Users/asan/.rbenv/bin:/usr/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:path/to/installed/dart/bin:/Users/asan/.local/bin:~/.pub-cache/bin
-export PATH=${HOME}/.cargo/bin:${PATH}
-if [ -d "$HOME/.goenv" ]; then
-  export GOENV_ROOT="$HOME/.goenv"
-  export PATH="$GOENV_ROOT/bin:$PATH"
-  which goenv > /dev/null && eval "$(goenv init -)"
-fi
+# export PATH=$HOME/go/appengine:$PATH
+# export PATH=/Users/asan/go/appengine:/Users/asan/.zplug/repos/zplug/zplug/bin:/bin:/Users/asan/flutter/bin:./bin:/Users/asan/.nodebrew/current/bin:/Users/asan/.composer/vendor/bin:/Users/asan/.rbenv/shims:/Users/asan/.rbenv/bin:/usr/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:path/to/installed/dart/bin:/Users/asan/.local/bin:~/.pub-cache/bin
+# export PATH=${HOME}/.cargo/bin:${PATH}
