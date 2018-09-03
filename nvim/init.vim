@@ -49,7 +49,7 @@ set formatprg=stylish-haskell
 set fileformats=unix,dos,mac
 set fileencodings=utf-8,sjis
 " tagsジャンプの時に複数ある時は一覧表示
-nnoremap <C-]> g<C-]>
+nnoremap <C-j> g<C-]>
 
 nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
 nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
