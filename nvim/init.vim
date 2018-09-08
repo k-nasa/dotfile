@@ -30,11 +30,6 @@ set expandtab
 "スワップファイルを作らない
 set noswapfile
 
-" for deoplete.vim
-" 一つ目の候補を選択状態にする
-set completeopt+=noinsert
-"補完を使う
-let g:deoplete#enable_at_startup = 1
 
 "htmlのタグ閉じ
 let g:loadedInsertTag = 1
@@ -43,17 +38,6 @@ let g:loadedInsertTag = 1
 let g:rustfmt_autosave = 1
 
 set formatprg=stylish-haskell
-
-
-"ダグジャンプ用設定 --------------
-set fileformats=unix,dos,mac
-set fileencodings=utf-8,sjis
-" tagsジャンプの時に複数ある時は一覧表示
-nnoremap <C-j> g<C-]>
-
-nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
-nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
-"----------------------------------
 
 "上８行を確保
 set scrolloff=8
@@ -161,7 +145,6 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml(s:toml,      {'lazy': 0})
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
-  " call dein#add('slim-template/vim-slim')
   call dein#add('dart-lang/dart-vim-plugin')
   " 設定終了
   call dein#end()
