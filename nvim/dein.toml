@@ -18,7 +18,13 @@ hook_add = 'call hook#ale#load()'
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 on_i = 1
-hook_add = 'let g:deoplete#enable_at_startup = 1'
+hook_add = 'call hook#deoplete#load()'
+
+# スニペット
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+on_ft = 'snippet'
+hook_add = 'call hook#neosnippet#load()'
 
 # =====================================================
 # lnagage server client
@@ -26,6 +32,7 @@ hook_add = 'let g:deoplete#enable_at_startup = 1'
 [[plugins]]
 repo             = 'autozimu/LanguageClient-neovim'
 rev              = 'next'
+
 # プラグインが読み込まれる際に呼び出されるコールバック
 depends = 'deoplete.nvim'
 on_ft = ['ruby']
@@ -50,9 +57,6 @@ repo ='Shougo/neomru.vim'
 
 [[plugins]]
 repo = 'cohama/lexima.vim'
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
 
 # --------------------------------------------------------
 
