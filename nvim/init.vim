@@ -45,8 +45,13 @@ set scrolloff=8
 "カラースキーム
 syntax on
 set t_Co=256
-colorscheme lucius
+colorscheme  spring-night
 set background=dark
+" use 24-bit color
+set termguicolors
+
+" For Neovim 0.1.5 or later
+set termguicolors
 
 " 矢印キーでの移動を禁ずる！
 noremap <Up> <Nop>

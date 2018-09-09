@@ -20,12 +20,6 @@ repo = 'Shougo/deoplete.nvim'
 on_i = 1
 hook_add = 'call hook#deoplete#load()'
 
-# スニペット
-[[plugins]]
-repo = 'Shougo/neosnippet.vim'
-on_ft = 'snippet'
-hook_add = 'call hook#neosnippet#load()'
-
 # =====================================================
 # lnagage server client
 # =====================================================
