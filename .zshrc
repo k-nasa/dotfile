@@ -1,9 +1,3 @@
-if [ -d "$HOME/.goenv" ]; then
-  export GOENV_ROOT="$HOME/.goenv"
-  export PATH="$GOENV_ROOT/bin:$PATH"
-  which goenv > /dev/null && eval "$(goenv init -)"
-fi
-
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH=$HOME/.composer/vendor/bin:$PATH
@@ -78,57 +72,3 @@ alias gch='git checkout'
 alias gc='git commit'
 alias gb='git branch'
 alias gcp='git cherry-pick'
-
-# 以下zplug---------------------------------------------
-if [[ ! -d ~/.zplug ]];then
-  git clone https://github.com/zplug/zplug ~/.zplug
-fi
-
-source ~/.zplug/init.zsh
-
-# enhancd config
-export ENHANCD_COMMAND=ed
-export ENHANCD_FILTER=ENHANCD_FILTER=fzy:fzf:peco
-
-# Vanilla shell
-zplug "yous/vanilli.sh"
-
-# Additional completion definitions for Zsh
-zplug "zsh-users/zsh-completions"
-# compinit 以降に読み込むようにロードの優先度を変更する
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-# 入力補完
-zplug "zsh-users/zsh-autosuggestions", defer:2
-
-# Load the theme.
-zplug mafredri/zsh-async, from:github
-zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
-
-
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
-# Then, source plugins and add commands to $PATH
-zplug load --verbose
-
-# Lime theme settings
-export LIME_DIR_DISPLAY_COMPONENTS=2
-
-# Better history searching with arrow keys
-if zplug check "zsh-users/zsh-history-substring-search"; then
-    bindkey "$terminfo[kcuu1]" history-substring-search-up
-    bindkey "$terminfo[kcud1]" history-substring-search-down
-fi
-
-# Add color to ls command
-export CLICOLOR=1
-
-# Set PATH for GAE
-# export PATH=$HOME/go/appengine:$PATH
-# export PATH=/Users/asan/go/appengine:/Users/asan/.zplug/repos/zplug/zplug/bin:/bin:/Users/asan/flutter/bin:./bin:/Users/asan/.nodebrew/current/bin:/Users/asan/.composer/vendor/bin:/Users/asan/.rbenv/shims:/Users/asan/.rbenv/bin:/usr/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:path/to/installed/dart/bin:/Users/asan/.local/bin:~/.pub-cache/bin
-# export PATH=${HOME}/.cargo/bin:${PATH}
