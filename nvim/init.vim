@@ -34,8 +34,6 @@ set noswapfile
 "htmlのタグ閉じ
 let g:loadedInsertTag = 1
 
-"保存時にrustfmt適用
-let g:rustfmt_autosave = 1
 
 set formatprg=stylish-haskell
 
@@ -76,6 +74,10 @@ set virtualedit=block
 
 " 構文チェックプラグイン ALE関係の設定
 let g:ale_lint_on_enter = 1
+
+" rustで保存時に整形
+let g:rustfmt_autosave = 1
+let g:rustfmt_command = '$HOME/.cargo/bin/rustfmt'
 
 
 "画面分割--------------------

@@ -14,6 +14,9 @@ repo = 'Shougo/vimproc.vim'
 repo = 'w0rp/ale'
 hook_add = 'call hook#ale#load()'
 
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
 # コードの自動補完
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
