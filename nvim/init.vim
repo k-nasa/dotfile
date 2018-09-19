@@ -1,9 +1,9 @@
 "  行数
 set number
 
-"ノーマルモード時にコロンとセミコロンを入れ替える
-nnoremap ; :
-nnoremap : ;
+" "ノーマルモード時にコロンとセミコロンを入れ替える <- 試験的にOFF
+" nnoremap ; :
+" nnoremap : ;
 
 "=================
 "filetype
@@ -21,8 +21,6 @@ nmap k <Plug>(accelerated_jk_gk)
 " insertモードから抜ける
 inoremap <silent> jj <ESC>
 
-inoremap <silent><C-y><C-y> <C-y>,
-
 "タブをスペースに
 set tabstop=2
 set shiftwidth=2
@@ -30,15 +28,8 @@ set expandtab
 "スワップファイルを作らない
 set noswapfile
 
-
-"htmlのタグ閉じ
-let g:loadedInsertTag = 1
-
-
-set formatprg=stylish-haskell
-
-"上８行を確保
-set scrolloff=8
+"上16行を確保
+set scrolloff=16
 
 "カラースキーム
 syntax on
@@ -75,10 +66,6 @@ set virtualedit=block
 " 構文チェックプラグイン ALE関係の設定
 let g:ale_lint_on_enter = 1
 
-" rustで保存時に整形
-let g:rustfmt_autosave = 1
-let g:rustfmt_command = '$HOME/.cargo/bin/rustfmt'
-
 
 "画面分割--------------------
 nnoremap ss :sp<CR>
@@ -106,17 +93,13 @@ nnoremap <silent><C-t> :NERDTreeToggle<CR>
 noremap ff :Unite -buffer-name=file file<CR> " ファイル一覧
 noremap fr :Unite file_mru<CR> " 最近使ったファイル一覧
 
-"unit.vim-railsの設定
-noremap rff :Unite rails/
-noremap rm :Unite rails/model<cr>
-noremap rc :Unite rails/controller<cr>
-noremap rv :Unite rails/view<cr>
-noremap rr :Unite rails/route<cr>
+" "unit.vim-railsの設定 <- Railsに依存した設定なのでOFF
+" noremap rff :Unite rails/
+" noremap rm :Unite rails/model<cr>
+" noremap rc :Unite rails/controller<cr>
+" noremap rv :Unite rails/view<cr>
+" noremap rr :Unite rails/route<cr>
 "---------------------------------------------------------------
-
-
-"markdown
-nnoremap <C-P> :PrevimOpen<CR>
 
 set diffopt+=vertical
 
