@@ -1,6 +1,6 @@
 function! hook#language_client_neovim#load() abort
   let g:LanguageClient_autoStart         = 1 " NeoVim起動時にLSPを自動スタート
-  let g:LanguageClient_diagnosticsEnable = 1 " シンタックスチェックをOFF
+  let g:LanguageClient_diagnosticsEnable = 0 " シンタックスチェックをOFF
 
   set hidden
   let g:LanguageClient_serverCommands = {

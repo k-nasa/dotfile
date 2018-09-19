@@ -80,10 +80,20 @@ repo = 'rust-lang/rust.vim'
 on_ft = 'rust'
 hook_source = '''
     let g:rustfmt_autosave = 1
+    let g:rustfmt_command = '$HOME/.cargo/bin/rustfmt'
 '''
 [[plugins]]
 repo = 'sebastianmarkow/deoplete-rust'
 on_ft = 'rust'
+hook_source = '''
+let g:racer_cmd = "~/.cargo/bin/racer"
+'''
+
+[[plugins]]
+repo = 'racer-rust/vim-racer'
+hook_source = '''
+let g:racer_cmd = "~/.cargo/bin/racer"
+'''
 
 #ruby用
 [[plugins]]
