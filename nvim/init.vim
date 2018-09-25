@@ -27,6 +27,7 @@ set shiftwidth=2
 set expandtab
 "スワップファイルを作らない
 set noswapfile
+set autoread "他で書き換えられたらautoloadする
 
 "上16行を確保
 set scrolloff=16
@@ -50,6 +51,8 @@ noremap <Right> <Nop>
 
 "余分な空白削除
 autocmd BufWritePre * :FixWhitespace
+" 最終行が空行だったら削除
+autocmd BufWritePre * call s:remove_space_in_last_line()
 
 " 対応括弧の表示秒数を3秒にする
 set matchtime=3
