@@ -17,7 +17,7 @@ eval "$(direnv hook zsh)"
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 eval `ssh-agent`
 
-source ~/.cargo/env
+# source ~/.cargo/env
 
 #エイリアス用の関数定義
 function mkcd() {
