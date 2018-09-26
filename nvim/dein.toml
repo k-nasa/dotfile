@@ -23,6 +23,18 @@ repo = 'Shougo/deoplete.nvim'
 on_i = 1
 hook_add = 'call hook#deoplete#load()'
 
+# ファイルツリーのやつ
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+# ファイラー
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
+# [[plugins]]
+# repo ='Shougo/unite.vim'
+
+
 # =====================================================
 # lnagage server client
 # =====================================================
@@ -139,13 +151,6 @@ repo = 'mattn/emmet-vim'
 #カラースキーム
 [[plugins]]
 repo = 'tomasr/molokai'
-
-# ファイルツリーのやつ
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-# ファイラー
-[[plugins]]
-repo ='Shougo/unite.vim'
 
 
 #vimの行横に+や-で差分を表示してくれる．
