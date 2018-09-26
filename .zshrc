@@ -1,5 +1,4 @@
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 export PATH=$HOME/.composer/vendor/bin:$PATH
 export GOPATH=$HOME/.go
 export PGDATA=/usr/local/var/postgres
@@ -120,4 +119,6 @@ export CLICOLOR=1
 
 # Set PATH for GAE
 export PATH=$HOME/go/appengine:$PATH
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
 export PATH=/Users/asan/go/appengine:/Users/asan/.zplug/repos/zplug/zplug/bin:/bin:/Users/asan/flutter/bin:./bin:/Users/asan/.nodebrew/current/bin:/Users/asan/.composer/vendor/bin:/Users/asan/.rbenv/shims:/Users/asan/.rbenv/bin:/usr/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:path/to/installed/dart/bin:/Users/asan/.local/bin:~/.pub-cache/bin
+eval "$(rbenv init -)"
