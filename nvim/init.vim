@@ -91,18 +91,10 @@ nnoremap <silent><C-t> :NERDTreeToggle<CR>
 :command Gs Gstatus
 "------------------------------
 
-
-"unit.vimの設定 ------------------------------------------------
-noremap ff :Unite -buffer-name=file file<CR> " ファイル一覧
-noremap fr :Unite file_mru<CR> " 最近使ったファイル一覧
-
-" "unit.vim-railsの設定 <- Railsに依存した設定なのでOFF
-" noremap rff :Unite rails/
-" noremap rm :Unite rails/model<cr>
-" noremap rc :Unite rails/controller<cr>
-" noremap rv :Unite rails/view<cr>
-" noremap rr :Unite rails/route<cr>
-"---------------------------------------------------------------
+" vim.fzfのショートカット追加
+nnoremap ff :Files<CR>
+nnoremap fg :GFiles<CR>
+"------------------------------
 
 set diffopt+=vertical
 

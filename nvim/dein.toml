@@ -29,10 +29,10 @@ repo = 'scrooloose/nerdtree'
 
 # ファイラー
 [[plugins]]
-repo = 'Shougo/denite.nvim'
+repo = '/usr/local/opt/fzf'
 
-# [[plugins]]
-# repo ='Shougo/unite.vim'
+[[plugins]]
+repo = 'junegunn/fzf.vim'
 
 
 # =====================================================
