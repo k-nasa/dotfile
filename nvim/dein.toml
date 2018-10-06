@@ -132,8 +132,6 @@ repo = 'AtsushiM/sass-compile.vim'
 #js用
 [[plugins]]
 repo = 'pangloss/vim-javascript'
-[[plugins]]
-repo = 'mxw/vim-jsx'
 
 # vue.js用
 [[plugins]]
