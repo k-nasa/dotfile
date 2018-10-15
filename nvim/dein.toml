@@ -97,6 +97,7 @@ hook_source = '''
 
 [[plugins]]
 repo = 'racer-rust/vim-racer'
+on_ft='rust'
 hook_source = '''
 let g:racer_cmd = "~/.cargo/bin/racer"
 '''

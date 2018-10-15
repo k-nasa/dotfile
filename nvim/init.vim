@@ -51,11 +51,7 @@ noremap <Right> <Nop>
 
 "余分な空白削除
 autocmd BufWritePre * :FixWhitespace
-" 最終行が空行だったら削除
-" autocmd BufWritePre * call s:remove_space_in_last_line()
 
-" 対応括弧の表示秒数を3秒にする
-set matchtime=3
 " クリップボード共有
 set clipboard+=unnamedplus
 " 行末1文字までカーソルを移動できるようにする
