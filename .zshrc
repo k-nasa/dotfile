@@ -71,3 +71,6 @@ alias gch='git checkout'
 alias gc='git commit'
 alias gb='git branch'
 alias gcp='git cherry-pick'
+
+# added by travis gem
+[ -f /Users/asan/.travis/travis.sh ] && source /Users/asan/.travis/travis.sh

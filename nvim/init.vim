@@ -43,12 +43,10 @@ endif
 if dein#check_install()
   call dein#install()
 endif
+
+
 "  行数
 set number
-
-" "ノーマルモード時にコロンとセミコロンを入れ替える <- 試験的にOFF
-" nnoremap ; :
-" nnoremap : ;
 
 "=================
 "filetype
