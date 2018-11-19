@@ -162,6 +162,9 @@ repo = 'vim-jp/cpp-vim'
 # Dart
 [[plugins]]
 repo = 'dart-lang/dart-vim-plugin'
+hook_add  = '''
+au BufNewFile,BufRead *.dart :set filetype=dart
+'''
 
 #行末の半角スペースを可視化FixWhitespaceで削除
 repo = 'bronson/vim-trailing-whitespace'
