@@ -30,7 +30,6 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml(s:toml,      {'lazy': 0})
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
-  call dein#add('dart-lang/dart-vim-plugin')
   " 設定終了
   call dein#end()
 
@@ -43,7 +42,6 @@ endif
 if dein#check_install()
   call dein#install()
 endif
-
 
 "  行数
 set number
@@ -101,10 +99,6 @@ set wrap
 
 "文字のないところにカーソル移動できるようにする"
 set virtualedit=block
-
-" 構文チェックプラグイン ALE関係の設定
-let g:ale_lint_on_enter = 1
-
 
 "画面分割--------------------
 nnoremap ss :sp<CR>
