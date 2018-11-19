@@ -92,9 +92,6 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-"余分な空白削除
-autocmd BufWritePre * :FixWhitespace
-
 " クリップボード共有
 set clipboard+=unnamedplus
 " 行末1文字までカーソルを移動できるようにする
@@ -118,7 +115,6 @@ nnoremap sl <C-w>l
 nnoremap sh <C-w>h
 nnoremap tt :tabe<CR>
 "---------------------------
-
 
 "alias色々 -------------------
 " <Space>i でコードをインデント整形
