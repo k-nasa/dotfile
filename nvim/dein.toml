@@ -67,8 +67,78 @@ repo ='Shougo/neomru.vim'
 [[plugins]]
 repo = 'cohama/lexima.vim'
 
-# --------------------------------------------------------
+#カラースキーム
+[[plugins]]
+repo = 'tomasr/molokai'
 
+
+# =====================================================
+# neovimをすこしいい感じにするやつ
+# TODO ここにプラグインを足すときは説明コメントをすること(忘れちゃうから)
+# =====================================================
+
+#vimの行横に+や-で差分を表示してくれる．
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+#コメントON/OFFを手軽に実行 ON/OFFはCtrl+-を二回
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+
+# インデントを可視化
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+
+# j, k移動高速化
+[[plugins]]
+repo = 'rhysd/accelerated-jk'
+
+#vimないでgitを使うためのプラグイン
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+# 検索終了後にハイライトを消す
+[[plugins]]
+repo = 'romainl/vim-cool'
+hook_add = '''let g:CoolTotalMatches = 1'''
+
+[[plugins]]
+repo = 'mhinz/vim-startify'
+hook_add = '''
+let g:startify_custom_header = [
+                  \ '                       █▀▀▄ █▀▀ █▀▀█ ▀█░█▀ ░▀░ █▀▄▀█',
+                  \ '                       █░░█ █▀▀ █░░█ ░█▄█░ ▀█▀ █░▀░█',
+                  \ '                       ▀░░▀ ▀▀▀ ▀▀▀▀ ░░▀░░ ▀▀▀ ▀░░░▀',
+                  \ '              config by nasa <https://github.com/nasa>',
+                  \ ]
+'''
+# 下のラインをカスタマイズするやつ
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+	let g:lightline = {
+		\ 'colorscheme': 'wombat',
+		\ 'active': {
+			\ 'left': [ ['mode', 'paste'], ['readonly', 'filepath', 'modified'] ]
+				\ },
+		\ 'component_function':{
+			\ 'filepath': 'FilePath'
+				\ }
+		\ }
+
+	function! FilePath()
+		if winwidth(0) > 90
+			return expand("%:s")
+		else
+			return expand("%:t")
+		endif
+	endfunction
+
+	" # show statusbar
+	set laststatus=2
+	" # hide --INSERT--
+	set noshowmode
+'''
 
 # =====================================================
 # 言語ごとのプラグイン
@@ -147,55 +217,3 @@ repo =  'othree/html5.vim'
 [[plugins]]
 repo = 'mattn/emmet-vim'
 
-#カラースキーム
-[[plugins]]
-repo = 'tomasr/molokai'
-
-
-#vimの行横に+や-で差分を表示してくれる．
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
-
-#コメントON/OFFを手軽に実行 ON/OFFはCtrl+-を二回
-[[plugins]]
-repo = 'tomtom/tcomment_vim'
-
-# インデントを可視化
-[[plugins]]
-repo = 'Yggdroot/indentLine'
-
-# j, k移動高速化
-[[plugins]]
-repo = 'rhysd/accelerated-jk'
-
-#vimないでgitを使うためのプラグイン
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-
-# 下のラインをカスタマイズするやつ
-[[plugins]]
-repo = 'itchyny/lightline.vim'
-hook_add = '''
-	let g:lightline = {
-		\ 'colorscheme': 'wombat',
-		\ 'active': {
-			\ 'left': [ ['mode', 'paste'], ['readonly', 'filepath', 'modified'] ]
-				\ },
-		\ 'component_function':{
-			\ 'filepath': 'FilePath'
-				\ }
-		\ }
-
-	function! FilePath()
-		if winwidth(0) > 90
-			return expand("%:s")
-		else
-			return expand("%:t")
-		endif
-	endfunction
-
-	" # show statusbar
-	set laststatus=2
-	" # hide --INSERT--
-	set noshowmode
-'''
