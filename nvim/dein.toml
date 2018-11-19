@@ -67,9 +67,17 @@ repo ='Shougo/neomru.vim'
 [[plugins]]
 repo = 'cohama/lexima.vim'
 
-#カラースキーム
+# =====================================================
+# カラースキーム
+# =====================================================
 [[plugins]]
 repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'joshdick/onedark.vim'
+
+[[plugins]]
+repo = 'chriskempson/base16-vim'
 
 
 # =====================================================
