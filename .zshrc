@@ -13,6 +13,10 @@ export GOPATH="$HOME/go"
 export PATH=$PATH:$GOPATH/bin
 export GO15VENDOREXPERIMENT=1
 
+# one darkのために追加
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
 eval "$(direnv hook zsh)"
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 eval `ssh-agent`
