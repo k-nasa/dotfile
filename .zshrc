@@ -78,3 +78,5 @@ alias gch='git checkout'
 alias gc='git commit'
 alias gb='git branch'
 alias gcp='git cherry-pick'
+
+eval "$(rbenv init -)"

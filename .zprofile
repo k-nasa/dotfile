@@ -4,7 +4,6 @@ if [ -d "$HOME/.goenv" ]; then
   which goenv > /dev/null && eval "$(goenv init -)"
 fi
 
-eval "$(rbenv init -)"
 export GOPATH="$HOME/go"
 export GO15VENDOREXPERIMENT=1
 

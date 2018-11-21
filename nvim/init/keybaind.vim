@@ -37,3 +37,6 @@ nnoremap ff :Files<CR>
 nnoremap fg :GFiles<CR>
 nnoremap fr :History<CR>
 "------------------------------
+
+"C-wで行末の空白を削除
+nnoremap <C-w> :FixWhitespace<CR>
