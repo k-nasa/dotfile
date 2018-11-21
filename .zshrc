@@ -17,6 +17,9 @@ export GO15VENDOREXPERIMENT=1
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+
 eval "$(direnv hook zsh)"
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 eval `ssh-agent`
@@ -75,6 +78,3 @@ alias gch='git checkout'
 alias gc='git commit'
 alias gb='git branch'
 alias gcp='git cherry-pick'
-
-# added by travis gem
-[ -f /Users/asan/.travis/travis.sh ] && source /Users/asan/.travis/travis.sh
