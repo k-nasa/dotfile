@@ -5,7 +5,7 @@ function! hook#ale#load() abort
 
   let g:ale_lint_on_enter = 1
   let g:ale_completion_enabled = 1
-  let g:ale_echo_cursor = 0
+  let g:ale_echo_cursor = 1
   let g:ale_virtualtext_cursor = 1
   let g:ale_virtualtext_prefix = '▬▶  '
 
