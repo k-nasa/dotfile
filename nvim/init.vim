@@ -33,3 +33,5 @@ set wrap
 set virtualedit=block
 "たぶん、横にdiffを出すやつ
 set diffopt+=vertical
+"余分な空白削除
+autocmd BufWritePre * :FixWhitespace
