@@ -52,10 +52,14 @@ function deploy(){
 #エイリアスの設定
 alias vim='nvim'
 alias vi="nvim"
+alias emacs='nvim'
+
 alias -s rb='ruby'
 alias -s py='python'
+
 alias vimc='vim ~/.config/nvim/init.vim'
 alias vimp='vim ~/.config/nvim/dein.toml'
+
 alias mkcd=mkcd #mkdirとcdを一括で行う
 alias push=push
 alias deploy=deploy
