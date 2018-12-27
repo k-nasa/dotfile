@@ -67,12 +67,6 @@ alias deploy=deploy
 alias l='ls'
 alias la='ls -all'
 
-
-# ghc
-alias ghci='stack ghci'
-alias ghc='stack ghc --'
-alias runghc='stack runghc --'
-
 #git関係のエイリアス
 alias g='git'
 alias gl='git log --oneline -10'
@@ -84,3 +78,4 @@ alias gb='git branch'
 alias gcp='git cherry-pick'
 
 eval "$(rbenv init -)"
+export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
