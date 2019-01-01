@@ -78,3 +78,4 @@ alias gb='git branch'
 alias gcp='git cherry-pick'
 
 eval "$(rbenv init -)"
+export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
