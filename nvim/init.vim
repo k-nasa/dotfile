@@ -19,10 +19,8 @@ set expandtab
 set noswapfile
 "他で書き換えられたらautoloadする
 set autoread
-
 "上16行を確保
 set scrolloff=16
-
 " クリップボード共有
 set clipboard+=unnamedplus
 " 行末1文字までカーソルを移動できるようにする
@@ -31,7 +29,7 @@ set virtualedit=onemore
 set wrap
 "文字のないところにカーソル移動できるようにする"
 set virtualedit=block
-"たぶん、横にdiffを出すやつ
+"横にdiffを出すやつ
 set diffopt+=vertical
 "余分な空白削除
 autocmd BufWritePre * :FixWhitespace
