@@ -214,8 +214,6 @@ repo = 'ujihisa/neco-ghc'
 #css用
 [[plugins]]
 repo = "gko/vim-coloresque"
-[[plugins]]
-repo = 'AtsushiM/sass-compile.vim'
 
 #js用
 [[plugins]]
