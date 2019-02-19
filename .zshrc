@@ -13,6 +13,9 @@ export GOPATH="$HOME/go"
 export PATH=$PATH:$GOPATH/bin
 export GO15VENDOREXPERIMENT=1
 
+# apt-getするため
+. /sw/bin/init.sh
+
 # one darkのために追加
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
