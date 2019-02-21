@@ -21,6 +21,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+echo 'export PATH="/usr/local/opt/openssl/bin:$PATH"'
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 
 eval "$(direnv hook zsh)"
