@@ -196,6 +196,11 @@ repo = 'fishbullet/deoplete-ruby'
 [[plugins]]
 repo = 'tpope/vim-endwise'
 
+# # rubyのフォーマッター
+# [[plugins]]
+# repo = 'ruby-formatter/rufo-vim'
+# hook_add = 'let g:rufo_auto_formatting = 1'
+
 #Rails用
 [[plugins]]
 repo = "tpope/vim-rails"
@@ -218,6 +223,9 @@ repo = "gko/vim-coloresque"
 #js用
 [[plugins]]
 repo = 'pangloss/vim-javascript'
+# CoffeeScript用
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
 
 # vue.js用
 [[plugins]]
