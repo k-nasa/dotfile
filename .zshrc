@@ -36,23 +36,6 @@ function mkcd() {
     cd $1;
 }
 
-function push(){
-  echo  "Please enter the commit message for your changes."
-  read msg
-  git add .
-  git commit -m "$msg"
-  git push
-}
-
-function deploy(){
-  echo  "Please enter the commit message for your changes."
-  read msg
-  git add .
-  git commit -m "$msg"
-  git push heroku master
-}
-
-
 #エイリアスの設定
 alias vim='nvim'
 alias vi="nvim"
