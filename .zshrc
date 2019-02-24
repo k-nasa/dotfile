@@ -21,7 +21,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-echo 'export PATH="/usr/local/opt/openssl/bin:$PATH"'
+export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 
 eval "$(direnv hook zsh)"
@@ -35,34 +35,7 @@ function mkcd() {
     mkdir $1;
     cd $1;
 }
-
-#エイリアスの設定
-alias vim='nvim'
-alias vi="nvim"
-alias emacs='nvim'
-
-alias -s rb='ruby'
-alias -s py='python'
-
-alias vimc='vim ~/.config/nvim/init.vim'
-alias vimp='vim ~/.config/nvim/dein.toml'
-
-alias mkcd=mkcd #mkdirとcdを一括で行う
-alias push=push
-alias deploy=deploy
-
-alias l='ls'
-alias la='ls -all'
-
-#git関係のエイリアス
-alias g='git'
-alias gl='git log --oneline -10'
-alias gs='git status'
-alias ga='git add'
-alias gch='git checkout'
-alias gc='git commit'
-alias gb='git branch'
-alias gcp='git cherry-pick'
-
 eval "$(rbenv init -)"
 export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+
+source .aliases
