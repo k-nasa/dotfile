@@ -38,4 +38,4 @@ function mkcd() {
 eval "$(rbenv init -)"
 export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 
-source .aliases
+source ~/.aliases
