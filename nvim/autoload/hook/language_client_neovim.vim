@@ -6,12 +6,10 @@ function! hook#language_client_neovim#load() abort
   let g:LanguageClient_serverCommands = {
         \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
         \ 'ruby': ['solargraph', 'stdio'],
-        \ 'javascript': ['flow-language-server', '--stdio'],
         \ 'haskell': ['hie', '--lsp'],
         \ 'dart': ['dart_language_server'],
         \ 'go': ['go-langserver']
         \ }
-
   " キーマップ
   nnoremap <silent> <C-h> :call LanguageClient_textDocument_hover()<CR>
   nnoremap <silent> <C-j> :call LanguageClient_textDocument_definition()<CR>
