@@ -227,6 +227,21 @@ repo = 'pangloss/vim-javascript'
 [[plugins]]
 repo = 'kchmck/vim-coffee-script'
 
+# jsフォーマッター
+[[plugins]]
+repo     = 'prettier/vim-prettier'
+build    = 'npm install'
+on_ft    = ['javascript', 'typescript', 'css', 'scss', 'json', 'markdown']
+hook_source = '''
+  " @formatアノテーションを持ったファイルの自動フォーマットを無効にする
+  let g:prettier#autoformat = 0
+
+  " Prettierのパースエラーをquickfixに表示しない
+  let g:prettier#quickfix_enabled = 0
+
+  autocmd BufWritePre *.js,*.ts,*.vue,*.css,*.scss,*.json,*.md PrettierAsync
+'''
+
 # vue.js用
 [[plugins]]
 repo = 'posva/vim-vue'
