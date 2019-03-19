@@ -254,3 +254,6 @@ repo =  'othree/html5.vim'
 #emmet-vim htmlが楽に書けるやつ
 [[plugins]]
 repo = 'mattn/emmet-vim'
+
+# Elm用
+repo = 'ElmCast/elm-vim'
