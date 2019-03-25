@@ -157,6 +157,7 @@ hook_add = '''
 # =====================================================
 # 言語ごとのプラグイン
 # シンタックスハイライト、Linter等
+# TODO on_ft = '言語' を書いて適用範囲を制限すること
 # =====================================================
 
 #clangのためのプラグイン
@@ -166,6 +167,7 @@ repo = 'vim-jp/cpp-vim'
 # Dart
 [[plugins]]
 repo = 'dart-lang/dart-vim-plugin'
+on_ft = 'dart'
 hook_add  = '''
 au BufNewFile,BufRead *.dart :set filetype=dart
 '''
@@ -189,9 +191,10 @@ hook_source = '''
 let g:racer_cmd = "~/.cargo/bin/racer"
 '''
 
-#ruby用
+# ruby用 ---------
 [[plugins]]
 repo = 'fishbullet/deoplete-ruby'
+
 # endを自動で入れてくれるやる
 [[plugins]]
 repo = 'tpope/vim-endwise'
