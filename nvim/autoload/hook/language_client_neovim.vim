@@ -8,7 +8,8 @@ function! hook#language_client_neovim#load() abort
         \ 'ruby': ['solargraph', 'stdio'],
         \ 'haskell': ['hie', '--lsp'],
         \ 'dart': ['dart_language_server'],
-        \ 'go': ['go-langserver']
+        \ 'go': ['go-langserver'],
+        \ 'typescript': ['typescript-language-server']
         \ }
   " キーマップ
   nnoremap <silent> <C-h> :call LanguageClient_textDocument_hover()<CR>

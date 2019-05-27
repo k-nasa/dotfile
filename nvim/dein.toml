@@ -260,3 +260,10 @@ repo = 'mattn/emmet-vim'
 
 # Elm用
 repo = 'ElmCast/elm-vim'
+
+# typescript -----------------
+[[plugins]]
+repo = "leafgarland/typescript-vim"
+
+[[plugins]]
+repo = "peitalin/vim-jsx-typescript"

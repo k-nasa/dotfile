@@ -13,6 +13,9 @@ export GOPATH="$HOME/go"
 export PATH=$PATH:$GOPATH/bin
 export GO15VENDOREXPERIMENT=1
 
+export PATH="$PATH":"$HOME/flutter/.pub-cache/bin"
+export PATH="$PATH":"$HOME/flutter/cache/dart-sdk/bin"
+
 # apt-getするため
 . /sw/bin/init.sh
 
