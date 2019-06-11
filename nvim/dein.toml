@@ -156,6 +156,10 @@ hook_add = '''
 	set noshowmode
 '''
 
+#行末の半角スペースを可視化FixWhitespaceで削除
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+
 # =====================================================
 # 言語ごとのプラグイン
 # シンタックスハイライト、Linter等
@@ -173,9 +177,6 @@ on_ft = 'dart'
 hook_add  = '''
 au BufNewFile,BufRead *.dart :set filetype=dart
 '''
-
-#行末の半角スペースを可視化FixWhitespaceで削除
-repo = 'bronson/vim-trailing-whitespace'
 
 # Rust
 [[plugins]]
