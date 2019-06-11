@@ -50,15 +50,17 @@ hook_add         = 'call hook#language_client_neovim#load()'
 
 
 # なんであるのかあんまり覚えてないやつ -------------------
-# vim8でdeopleteを使うのに必要
-[[plugins]]
-repo = 'roxma/nvim-yarp'
-on_ft = ['ruby']
-
-# vim8でdeopleteを使うのに必要
-[[plugins]]
-repo = 'roxma/vim-hug-neovim-rpc'
-on_ft = ['ruby']
+# TODO on_ft = rubyとか書いてあるし普段入らないやつなのでは？
+# ということで実験的にコメントアウト！
+# # vim8でdeopleteを使うのに必要
+# [[plugins]]
+# repo = 'roxma/nvim-yarp'
+# on_ft = ['ruby']
+#
+# # vim8でdeopleteを使うのに必要
+# [[plugins]]
+# repo = 'roxma/vim-hug-neovim-rpc'
+# on_ft = ['ruby']
 
 
 [[plugins]]
