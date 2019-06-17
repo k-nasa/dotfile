@@ -1,6 +1,6 @@
 " ===========================================================
-" keyband 
-" キーバインド系の設定 
+" keyband
+" キーバインド系の設定
 " ===========================================================
 
 " 矢印キーでの移動を禁ずる！
@@ -26,7 +26,7 @@ nnoremap tt :tabe<CR>
 " <Space>i でコードをインデント整形
 nnoremap <Space>i gg=<S-g><C-o><C-o>zzk
 "NERDTreeをctrl+tで開く
-nnoremap <silent><C-t> :NERDTreeToggle<CR>
+nnoremap <silent><C-n> :NERDTreeToggle<CR>
 
 :command Ga Gwrite
 :command Gs Gstatus
@@ -37,6 +37,3 @@ nnoremap ff :Files<CR>
 nnoremap fg :GFiles<CR>
 nnoremap fr :History<CR>
 "------------------------------
-
-"C-wで行末の空白を削除
-nnoremap <C-w> :FixWhitespace<CR>
