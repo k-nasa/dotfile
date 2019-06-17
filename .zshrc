@@ -53,6 +53,3 @@ function mkcd() {
 }
 
 source ~/.aliases
-
-bindkey -v
-bindkey "jj" vi-cmd-mode
