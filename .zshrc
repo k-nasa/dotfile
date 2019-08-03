@@ -18,10 +18,13 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:path/to/installed/dart/bin
 export PATH=./bin:$PATH
+export PATH="/usr/local/Cellar/git/2.22.0_1/bin:$PATH"
+export PATH=~/.local/bin:$PATH
+# export PATH=/usr/local/bin/code
 
 # mysql5.7を使うため
-export LDFLAGS="-L/usr/local/opt/mysql@5.7/lib"
-export CPPFLAGS="-I/usr/local/opt/mysql@5.7/include"
+# export LDFLAGS="-L/usr/local/opt/mysql@5.7/lib"
+# export CPPFLAGS="-I/usr/local/opt/mysql@5.7/include"
 
 # 覚えてない
 export XDG_CONFIG_HOME=~/.config
@@ -39,6 +42,7 @@ export GO15VENDOREXPERIMENT=1
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
+eval "$(anyenv init -)"
 eval "$(direnv hook zsh)"
 eval "$(nodenv init -)"
 eval "$(rbenv init -)"

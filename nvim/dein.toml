@@ -50,19 +50,6 @@ hook_add         = 'call hook#language_client_neovim#load()'
 
 
 # なんであるのかあんまり覚えてないやつ -------------------
-# TODO on_ft = rubyとか書いてあるし普段入らないやつなのでは？
-# ということで実験的にコメントアウト！
-# # vim8でdeopleteを使うのに必要
-# [[plugins]]
-# repo = 'roxma/nvim-yarp'
-# on_ft = ['ruby']
-#
-# # vim8でdeopleteを使うのに必要
-# [[plugins]]
-# repo = 'roxma/vim-hug-neovim-rpc'
-# on_ft = ['ruby']
-
-
 [[plugins]]
 repo ='Shougo/neomru.vim'
 
@@ -292,3 +279,4 @@ hook_add = '''
 let g:go_fmt_command = "goimports"
 let g:go_metalinter_autosave = 1
 '''
+# let g:go_metalinter_autosave_enabled = ['vet']
