@@ -9,19 +9,25 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 
-# 非同期シンタックスチェック
-[[plugins]]
-repo = 'w0rp/ale'
-hook_add = 'call hook#ale#load()'
+# # 非同期シンタックスチェック
+# [[plugins]]
+# repo = 'w0rp/ale'
+# hook_add = 'call hook#ale#load()'
 
 [[plugins]]
 repo = 'Shougo/context_filetype.vim'
 
-# コードの自動補完
+# # コードの自動補完
+# [[plugins]]
+# repo = 'Shougo/deoplete.nvim'
+# on_i = 1
+# hook_add = 'call hook#deoplete#load()'
+
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-on_i = 1
-hook_add = 'call hook#deoplete#load()'
+repo = 'neoclide/coc.nvim'
+build = 'call coc#util#install()'
+branch = 'release'
+hook_add         = 'call hook#coc#load()'
 
 # ファイルツリーのやつ
 [[plugins]]
@@ -38,15 +44,15 @@ repo = 'junegunn/fzf.vim'
 # =====================================================
 # lnagage server client
 # =====================================================
-[[plugins]]
-repo             = 'autozimu/LanguageClient-neovim'
-rev              = 'next'
+#[[plugins]]
+#repo             = 'autozimu/LanguageClient-neovim'
+#rev              = 'next'
 
 # プラグインが読み込まれる際に呼び出されるコールバック
-depends = 'deoplete.nvim'
-on_ft = ['ruby']
-build = './install.sh'
-hook_add         = 'call hook#language_client_neovim#load()'
+#depends = 'deoplete.nvim'
+#on_ft = ['ruby']
+#build = './install.sh'
+#hook_add         = 'call hook#language_client_neovim#load()'
 
 
 # なんであるのかあんまり覚えてないやつ -------------------
