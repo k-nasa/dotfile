@@ -1,5 +1,5 @@
 #エイリアスの設定
-alias vim='nvim'
+# alias vim='nvim'
 alias vi="nvim"
 
 alias vimc='vim ~/.config/nvim/init.vim'

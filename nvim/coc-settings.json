@@ -10,18 +10,11 @@
         "diagnosticsEnabled": true,
         "lintTool": "golint"
       },
-      "rust": {
-        "command": "ra_lsp_server",
-        "filetypes": ["rust"],
-        "rootPatterns": ["Cargo.toml"]
-      }
     },
-    "efm": { //Markdown,vim,erbのLSP
-      "command": "efm-langserver",
-      "args": [],
-      // custom config path
-      // "args": ["-c", "/path/to/your/config.yaml"],
-      "filetypes": ["vim", "eruby", "markdown"]
+    "rust": {
+      "command": "ra_lsp_server",
+      "filetypes": ["rust"],
+      "rootPatterns": ["Cargo.toml"]
     }
   }
 }
