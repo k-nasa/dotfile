@@ -278,11 +278,11 @@ repo = "peitalin/vim-jsx-typescript"
 on_ft = 'typescript'
 
 # golang用 --------------------
-# [[plugins]]
-# repo = 'fatih/vim-go'
-# on_ft = 'go'
-# hook_add = '''
-# let g:go_fmt_command = "goimports"
-# let g:go_metalinter_autosave = 1
-# '''
-# let g:go_metalinter_autosave_enabled = ['vet']
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
+hook_add = '''
+let g:go_fmt_command = "goimports"
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet']
+'''
