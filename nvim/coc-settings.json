@@ -11,10 +11,30 @@
         "lintTool": "golint"
       },
     },
+    "elmLS": {
+      "command": "elm-language-server",
+      "args": ["--stdio"],
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"],
+      "initializationOptions": {
+        "runtime": "node",
+        "elmPath": "elm",
+        "elmFormatPath": "elm-format",
+        "elmTestPath": "elm-test"
+      },
+    },
     "rust": {
       "command": "ra_lsp_server",
       "filetypes": ["rust"],
       "rootPatterns": ["Cargo.toml"]
+    },
+    "sorbet": {
+      "command": "srb",
+      "args": ["tc", "--lsp", "--enable-all-experimental-lsp-features"],
+      "filetypes": ["ruby"],
+      "rootPatterns": ["sorbet/config"],
+      "initializationOptions": {},
+      "settings": {}
     }
   }
 }
