@@ -37,6 +37,7 @@ export CLICOLOR=1
 # Golang関連
 export GOPATH="$HOME/go"
 export GO15VENDOREXPERIMENT=1
+export GO111MODULE=on
 
 # one darkのために追加
 export CLICOLOR=1
