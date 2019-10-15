@@ -22,3 +22,10 @@ alias gcp='git cherry-pick'
 alias gsw='git branch | fzf --height 20% | xargs git checkout'
 
 alias jqr="jq -R 'fromjson?'"
+
+#エイリアス用の関数定義
+function mkcd() {
+    mkdir $1;
+    cd $1;
+}
+

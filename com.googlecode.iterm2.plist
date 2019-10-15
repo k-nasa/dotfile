@@ -873,9 +873,9 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>80 193 592 584 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>11 0 1426 877 0 0 1440 877 </string>
+	<string>483 0 954 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>723 0 665 877 0 0 1440 877 </string>
+	<string>7 0 1045 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>2046 -280 570 1080 1280 -280 1920 1080 </string>
 	<key>NeverWarnAboutPossibleOverrides</key>
@@ -1656,6 +1656,7 @@
 		<string>3.3.1</string>
 		<string>3.3.0</string>
 		<string>3.3.3</string>
+		<string>3.3.6</string>
 	</array>
 	<key>NoSyncFrame_SessionsPreferences</key>
 	<dict>
@@ -1682,7 +1683,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>569638630.99318898</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>14</integer>
+	<integer>27</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2204,9 +2205,25 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>title</string>
+				<key>nonterminalContext</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
 				<string>tmuxWindowTitle</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>title</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2405,16 +2422,16 @@
 	</array>
 	<key>NoSyncSearchHistory2</key>
 	<array>
-		<string>FIND</string>
-		<string>FINDER</string>
-		<string>appen</string>
-		<string>red</string>
-		<string>redi</string>
-		<string>param</string>
-		<string>context</string>
-		<string>cursorn</string>
-		<string>yashima/connections</string>
-		<string>connect</string>
+		<string>ocr_service</string>
+		<string>contac</string>
+		<string>categorized time</string>
+		<string>categoo</string>
+		<string>libra time</string>
+		<string>refine</string>
+		<string>refine_</string>
+		<string>refine-</string>
+		<string>time</string>
+		<string>category time</string>
 	</array>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>568889868.79480302</real>
@@ -2481,7 +2498,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-09-16T09:09:17Z</date>
+	<date>2019-10-12T23:54:47Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -2489,7 +2506,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowNewOutputIndicator</key>
 	<true/>
 	<key>SoundForEsc</key>
@@ -2511,7 +2528,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.3</string>
+	<string>3.3.6</string>
 	<key>kCPFavoritesUserDefaultsKey</key>
 	<array>
 		<data>

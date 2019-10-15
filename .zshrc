@@ -37,7 +37,7 @@ export CLICOLOR=1
 # Golang関連
 export GOPATH="$HOME/go"
 export GO15VENDOREXPERIMENT=1
-export GO111MODULE=on
+# export GO111MODULE=on
 
 # one darkのために追加
 export CLICOLOR=1
@@ -47,14 +47,9 @@ eval "$(anyenv init -)"
 eval "$(direnv hook zsh)"
 eval "$(nodenv init -)"
 eval "$(rbenv init -)"
+# eval "$(starship init zsh)"
 eval `ssh-agent`
 
 # source ~/.cargo/env
-
-#エイリアス用の関数定義
-function mkcd() {
-    mkdir $1;
-    cd $1;
-}
 
 source ~/.aliases
