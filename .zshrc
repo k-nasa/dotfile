@@ -46,6 +46,7 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 eval "$(anyenv init -)"
 eval "$(direnv hook zsh)"
 eval "$(nodenv init -)"
+eval "$(pyenv init -)"
 eval "$(rbenv init -)"
 # eval "$(starship init zsh)"
 eval `ssh-agent`

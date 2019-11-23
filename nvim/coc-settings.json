@@ -1,6 +1,8 @@
 {
   "suggest.noselect":false,
   "suggest.preferCompleteThanJumpPlaceholder":true,
+  "suggest.enablePreselect": true,
+  "solargraph.commandPath": "/Users/nasa/.rbenv/shims/solargraph",
   "languageserver":{
     "golang":{
       "command": "go-langserver",
