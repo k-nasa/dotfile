@@ -9,8 +9,8 @@ syntax on
 set termguicolors
 
 if !exists('g:colors_name')
-  let g:lightline.colorscheme = 'onedark'
+  let g:lightline.colorscheme = 'dogrun'
   set background=dark
-  colorscheme onedark
+  colorscheme dogrun
 endif
 
