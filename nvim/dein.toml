@@ -14,9 +14,9 @@ repo = 'Shougo/context_filetype.vim'
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
-merged='0'
-rev = 'release'
-hook_add = 'call hook#coc#load()'
+build = 'call coc#util#install()'
+branch = 'release'
+hook_add         = 'call hook#coc#load()'
 
 # ファイルツリーのやつ
 [[plugins]]
