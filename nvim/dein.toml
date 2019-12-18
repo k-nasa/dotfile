@@ -41,9 +41,6 @@ repo = 'joshdick/onedark.vim'
 [[plugins]]
 repo = 'chriskempson/base16-vim'
 
-[[plugins]]
-repo = 'wadackel/vim-dogrun'
-
 
 # =====================================================
 # neovimをすこしいい感じにするやつ
