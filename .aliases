@@ -31,12 +31,16 @@ function mkcd() {
 
 function pull {
   remote=$1;
-  echo "git pull ${remote:-origin} HEAD";
-  git pull ${remote:-origin} HEAD;
+  pull_command="git pull ${remote:-origin} HEAD";
+
+  echo $pull_command;
+  eval $pull_command
 }
 
 function push {
   remote=$1;
-  echo "git pull ${remote:-origin} HEAD";
-  git pull ${remote:-origin} HEAD;
+  push_command="git pull ${remote:-origin} HEAD";
+
+  echo $push_command;
+  eval $push_command;
 }
