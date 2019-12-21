@@ -20,8 +20,8 @@ alias gc='git commit'
 alias gb='git branch'
 alias gcp='git cherry-pick'
 alias gsw='git branch | fzf --height 20% | xargs git checkout'
-alias push='git push origin head'
-alias pull='git pull upstream head'
+alias push=push
+alias pull=pull
 
 #エイリアス用の関数定義
 function mkcd() {
@@ -29,3 +29,14 @@ function mkcd() {
     cd $1;
 }
 
+function pull {
+  remote=$1;
+  echo "git pull ${remote:-origin} HEAD";
+  git pull ${remote:-origin} HEAD;
+}
+
+function push {
+  remote=$1;
+  echo "git pull ${remote:-origin} HEAD";
+  git pull ${remote:-origin} HEAD;
+}
