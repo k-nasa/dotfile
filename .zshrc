@@ -20,19 +20,6 @@ export PATH=$PATH:path/to/installed/dart/bin
 export PATH=./bin:$PATH
 export PATH="/usr/local/Cellar/git/2.22.0_1/bin:$PATH"
 export PATH=~/.local/bin:$PATH
-# export PATH=/usr/local/bin/code
-
-# mysql5.7を使うため
-# export LDFLAGS="-L/usr/local/opt/mysql@5.7/lib"
-# export CPPFLAGS="-I/usr/local/opt/mysql@5.7/include"
-
-# 覚えてない
-export XDG_CONFIG_HOME=~/.config
-# Lime theme settings
-export LIME_DIR_DISPLAY_COMPONENTS=2
-# Add color to ls command
-export CLICOLOR=1
-
 
 # Golang関連
 export GOPATH="$HOME/go"
@@ -43,14 +30,10 @@ export GO15VENDOREXPERIMENT=1
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
-eval "$(anyenv init -)"
 eval "$(direnv hook zsh)"
 eval "$(nodenv init -)"
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
-# eval "$(starship init zsh)"
 eval `ssh-agent`
-
-# source ~/.cargo/env
 
 source ~/.aliases
