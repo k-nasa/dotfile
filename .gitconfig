@@ -8,10 +8,6 @@
 [core]
 	editor = nvim
 	excludesfile = /Users/nasa/.gitignore_global
-[credential.helper]
-	helper = store
-  username = k-nasa
-  password = tE8h3KOQ1g6b
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

@@ -7,6 +7,7 @@ alias vimp='vim ~/.config/nvim/dein.toml'
 
 alias mkcd=mkcd #mkdirとcdを一括で行う
 
+alias ls='exa'
 alias l='ls'
 alias la='ls -all'
 
