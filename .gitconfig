@@ -1,20 +1,20 @@
 [user]
-	name = k-nasa
-	email = htilcs1115@gmail.com
+  name = k-nasa
+  email = htilcs1115@gmail.com
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+  diff = auto
+  status = auto
+  branch = auto
 [core]
-	editor = nvim
-	excludesfile = /Users/nasa/.gitignore_global
+  editor = nvim
+  excludesfile = /Users/nasa/.gitignore_global
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 [commit]
-    template = /Users/nasa/.commit_template
+  template = /Users/nasa/.commit_template
 
 # This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
 [include]
