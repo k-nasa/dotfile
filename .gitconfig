@@ -7,7 +7,7 @@
   branch = auto
 [core]
   editor = nvim
-  excludesfile = /Users/nasa/.gitignore_global
+	excludesfile = /Users/nasa/.gitignore_global
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f

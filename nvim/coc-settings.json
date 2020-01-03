@@ -1,22 +1,28 @@
 {
-  "suggest.noselect":false,
-  "suggest.preferCompleteThanJumpPlaceholder":true,
+  "suggest.noselect": false,
+  "suggest.preferCompleteThanJumpPlaceholder": true,
   "suggest.enablePreselect": true,
   "solargraph.commandPath": "/Users/nasa/.rbenv/shims/solargraph",
-  "languageserver":{
-    "golang":{
+  "languageserver": {
+    "golang": {
       "command": "go-langserver",
       "filetypes": ["go"],
       "initializationOptions": {
         "gocodeCompletionEnabled": true,
         "diagnosticsEnabled": true,
         "lintTool": "golint"
-      },
+      }
     },
     "ccls": {
       "command": "ccls",
       "filetypes": ["c", "cpp", "objc", "objcpp"],
-      "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+      "rootPatterns": [
+        ".ccls",
+        "compile_commands.json",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
       "initializationOptions": {
         "cache": {
           "directory": "/tmp/ccls"
@@ -33,7 +39,7 @@
         "elmPath": "elm",
         "elmFormatPath": "elm-format",
         "elmTestPath": "elm-test"
-      },
+      }
     },
     "rust": {
       "command": "ra_lsp_server",
