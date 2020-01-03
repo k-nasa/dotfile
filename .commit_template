@@ -1,21 +1,17 @@
 
 # ==================== Emojis ====================
-# 🎉  :tada: 初めてのコミット（Initial Commit）
-# 🔖  :bookmark: バージョンタグ（Version Tag）
-# ✨  :sparkles: 新機能（New Feature）
-# 🐛  :bug: バグ修正（Bagfix）
-# ♻️  :recycle: リファクタリング(Refactoring)
-# 📚  :books: ドキュメント（Documentation）
-# 🎨  :art: デザインUI/UX(Accessibility)
-# 🐎  :horse: パフォーマンス（Performance）
-# 🔧  :wrench: ツール（Tooling）
-# 🚨  :rotating_light: テスト（Tests）
-# 💩  :hankey: 非推奨追加（Deprecation）
-# 🗑️  :wastebasket: 削除（Removal）
-# 🚧  :construction: WIP(Work In Progress)
+# build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+# ci: Changes to our CI configuration files and scripts (example scopes: Circle, BrowserStack, SauceLabs)
+# docs: Documentation only changes
+# feat: A new feature
+# fix: A bug fix
+# perf: A code change that improves performance
+# refactor: A code change that neither fixes a bug nor adds a feature
+# style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+# test: Adding missing tests or correcting existing tests
 
 
 # ==================== Format ====================
-# :emoji: Subject
+# :prefix: Subject
 #
 # Commit body...
