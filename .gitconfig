@@ -7,15 +7,15 @@
   branch = auto
 [core]
   editor = nvim
-	excludesfile = /Users/nasa/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
 [commit]
-  template = /Users/nasa/.commit_template
+  template = ~/.commit_template
 
 # This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
 [include]
-  path = /Users/nasa/.netlify/helper/git-config
+  path = ~/.netlify/helper/git-config
