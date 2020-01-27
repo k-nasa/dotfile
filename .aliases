@@ -2,8 +2,6 @@
 
 alias vi="nvim"
 
-alias vimc='vim ~/.config/nvim/init.vim'
-alias vimp='vim ~/.config/nvim/dein.toml'
 
 alias mkcd=mkcd #mkdirとcdを一括で行う
 
