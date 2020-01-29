@@ -47,6 +47,10 @@ repo = 'chriskempson/base16-vim'
 # TODO ここにプラグインを足すときは説明コメントをすること(忘れちゃうから)
 # =====================================================
 
+# 自動でカッコを付けてくれるやつ
+[[plugins]]
+repo = 'mattn/vim-lexiv'
+
 # wakatimeを使ってコーディング時間を見る
 [[plugins]]
 repo = 'wakatime/vim-wakatime'
