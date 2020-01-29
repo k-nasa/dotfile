@@ -2,16 +2,26 @@
 
 alias vi="nvim"
 
-alias vimc='vim ~/.config/nvim/init.vim'
-alias vimp='vim ~/.config/nvim/dein.toml'
+#mkdirとcdを一括で行う
+alias mkcd=mkcd
+function mkcd() {
+    mkdir $1;
+    cd $1;
+}
 
-alias mkcd=mkcd #mkdirとcdを一括で行う
+# 'cat hogehoge C'などでクリップボードにコピーできる
+alias -g C='| pbcopy'
 
+# ==========================================
+#git関係のエイリアス
+# ==========================================
 alias ls='exa'
 alias l='ls'
 alias la='ls -all'
 
+# ==========================================
 #git関係のエイリアス
+# ==========================================
 alias g='git'
 alias gl='git log --oneline -10'
 alias gs='git status'
@@ -23,12 +33,6 @@ alias gcp='git cherry-pick'
 alias gsw='git branch | fzf --height 20% | xargs git checkout'
 alias push=push
 alias pull=pull
-
-#エイリアス用の関数定義
-function mkcd() {
-    mkdir $1;
-    cd $1;
-}
 
 function pull {
   remote=$1;
