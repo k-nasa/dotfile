@@ -55,7 +55,4 @@ zplug load
 # Lime theme settings
 export LIME_DIR_DISPLAY_COMPONENTS=2
 
-# Add color to ls command
-export CLICOLOR=1
-
 export PATH="$HOME/.cargo/bin:$PATH"
