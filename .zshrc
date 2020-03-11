@@ -1,6 +1,6 @@
 source ~/.zprofile
-source ~/.aliases
-source ~/.paths
+source ~/aliases
+source ~/paths
 
 eval "$(direnv hook zsh)"
 eval "$(nodenv init -)"
