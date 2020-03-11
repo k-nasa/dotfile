@@ -1,0 +1,9 @@
+# 各種ファイルのシンボリックリンクを貼る
+
+ln -sf ./nvim ~/.config/nvim
+ln -sf ./.zshrc ~/
+ln -sf ./.zprofile ~/
+ln -sf ./.aliases ~/
+ln -sf ./.gitignore_global ~/
+ln -sf ./.gitconfig ~/
+ln -sf ./.commit_template ~/
