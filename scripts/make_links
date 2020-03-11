@@ -2,10 +2,11 @@
 
 ln -sf ./nvim ~/.config/nvim
 
-ln -sf ~/dotfile/.zshrc ~/
-ln -sf ~/dotfile/.zprofile ~/
-ln -sf ~/dotfile/paths ~/
-ln -sf ~/dotfile/aliases ~/
-ln -sf ~/dotfile/.gitignore_global ~/
-ln -sf ~/dotfile/.gitconfig ~/
-ln -sf ~/dotfile/.commit_template ~/
+ln -sf ~/dotfile/shell/.zshrc ~/
+ln -sf ~/dotfile/shell/.zprofile ~/
+ln -sf ~/dotfile/shell/paths ~/
+ln -sf ~/dotfile/shell/aliases ~/
+
+ln -sf ~/dotfile/git/.gitignore_global ~/
+ln -sf ~/dotfile/git/.gitconfig ~/
+ln -sf ~/dotfile/git/.commit_template ~/
