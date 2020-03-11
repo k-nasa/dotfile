@@ -35,5 +35,4 @@ nnoremap <silent><C-n> :NERDTreeToggle<CR>
 " vim.fzfのショートカット追加
 nnoremap ff :Files<CR>
 nnoremap fg :GFiles<CR>
-nnoremap fr :History<CR>
 "------------------------------
