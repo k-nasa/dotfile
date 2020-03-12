@@ -27,12 +27,12 @@ homebrew() {
   echo "check installed homebrew"
 
   brew --version > /dev/null
-  if ! [ $? = 0 ]; then
+  if [ $? -ne 0 ]; then
     echo 'brew not found. try install homebrew'
 
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   else
-    echo "homebrew installed"
+    echo "homebrew already installed"
   fi
 
   brew bundle check --global
@@ -44,9 +44,25 @@ homebrew() {
   fi
 }
 
+install_rustup() {
+  echo "check installed rustup"
+
+  rustup --version > /dev/null
+  if [ $? -ne 0 ]; then
+    echo "install rustup"
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  else
+    echo "rustup already installed"
+  fi
+
+  echo "finished rustup"
+}
+
 main() {
   make_links
   homebrew
+
+  install_rustup
 }
 
 main
