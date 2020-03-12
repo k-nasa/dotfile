@@ -2,6 +2,15 @@
 #
 # bootstrap
 
+info () {
+  printf "\r  [ \033[00;34mINFO\033[0m ] $1\n"
+}
+
+success () {
+  printf "\r\033[2K  [  \033[00;32mOK\033[0m  ] $1\n"
+}
+
+
 make_links() {
   # 各種ファイルのシンボリックリンクを貼る
   ln -sf .dotfile/nvim ~/.config/nvim
@@ -17,53 +26,75 @@ make_links() {
     .Brewfile
     """
 
+    info "start create dotfile links"
+
     for dotfile in $DOTFILES
     do
-      echo "link $(pwd)/$dotfile to $HOME"
+      info "link $(pwd)/$dotfile to $HOME"
       ln -fns $(pwd)/$dotfile $HOME
     done
+
+    success "Sucess create dotfile links"
   }
 
 homebrew() {
-  echo "check installed homebrew"
+  info "check installed homebrew"
 
   brew --version > /dev/null
   if [ $? -ne 0 ]; then
-    echo 'brew not found. try install homebrew'
+    info 'brew not found. try install homebrew'
 
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+    success "success install homebrew"
   else
-    echo "homebrew already installed"
+    info "homebrew already installed"
   fi
 
   brew bundle check --global
   if [ $? -ne 0 ]; then
-    echo 'Install `brew` dependencies...'
+    info 'Install `brew` dependencies...'
     brew bundle --global -v
+
+    success "success Install `brew` dependencies"
   else
-    echo '`brew` dependencies are satisfied :smile:' | emojify
+    info '`brew` dependencies are satisfied :smile:' | emojify
   fi
 }
 
 install_rustup() {
-  echo "check installed rustup"
+  info "check installed rustup"
 
   rustup --version > /dev/null
   if [ $? -ne 0 ]; then
-    echo "install rustup"
+    info "install rustup"
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+    success "success Install rustup"
   else
-    echo "rustup already installed"
+    info "rustup already installed"
   fi
 
-  echo "finished rustup"
+  success "finished rustup"
 }
+
+setting_default_shell() {
+  info "change default shell to zsh"
+
+  chsh -s /usr/local/bin/zsh
+
+  success "success change default shell"
+}
+
 
 main() {
   make_links
   homebrew
+  setting_default_shell
 
   install_rustup
+
+  success "Finished!!"
 }
 
 main
