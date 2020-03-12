@@ -17,7 +17,6 @@ brew "git-lfs"
 brew "jq"
 brew "wget"
 brew "htop"
-brew "ngrok"
 brew "github/gh/gh"
 brew "direnv"
 
@@ -27,3 +26,5 @@ brew "cmake"
 # my tools
 brew "k-nasa/tap/prf"
 brew "k-nasa/tap/rgh"
+tap "k-nasa/homebrew-rmemo"
+brew "rmemo"
