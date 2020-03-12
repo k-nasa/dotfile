@@ -58,7 +58,7 @@ homebrew() {
 
     success "success Install `brew` dependencies"
   else
-    info '`brew` dependencies are satisfied :smile:' | emojify
+    info '`brew` dependencies are satisfied'
   fi
 }
 
