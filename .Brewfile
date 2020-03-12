@@ -5,9 +5,7 @@ brew "zsh"
 # language env
 brew 'rbenv'
 brew 'pyenv'
-brew 'noden'
-
-brew "cmake"
+brew 'nodenv'
 
 # tools
 brew "exa"
@@ -22,6 +20,9 @@ brew "htop"
 brew "ngrok"
 brew "github/gh/gh"
 brew "direnv"
+
+# etc
+brew "cmake"
 
 # my tools
 brew "k-nasa/tap/prf"
