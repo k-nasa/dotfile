@@ -1,27 +1,24 @@
+#!/bin/zsh
+#
 #エイリアスの設定
-
-alias vi="nvim"
-
-#mkdirとcdを一括で行う
-alias mkcd=mkcd
-function mkcd() {
-    mkdir $1;
-    cd $1;
-}
 
 # 'cat hogehoge C'などでクリップボードにコピーできる
 alias -g C='| pbcopy'
-alias e='exit'
+
 
 # ==========================================
-#git関係のエイリアス
+# shell関係のエイリアス
 # ==========================================
+alias e='exit'
+alias reload="source $HOME/.zshrc"
+
+alias vi="nvim"
 alias ls='exa'
 alias l='ls'
 alias la='ls -all'
 
 # ==========================================
-#git関係のエイリアス
+# git関係のエイリアス
 # ==========================================
 alias g='git'
 alias gl='git log --oneline -10'
@@ -32,8 +29,14 @@ alias gc='git commit'
 alias gb='git branch'
 alias gcp='git cherry-pick'
 alias gsw='git branch | fzf --height 20% | xargs git checkout'
+
+# ==========================================
+# function
+# ==========================================
+
 alias push=push
 alias pull=pull
+alias mkcd=mkcd
 
 function pull {
   remote=$1;
@@ -50,3 +53,10 @@ function push {
   echo $push_command;
   eval $push_command;
 }
+
+#mkdirとcdを一括で行う
+function mkcd() {
+    mkdir $1;
+    cd $1;
+}
+
