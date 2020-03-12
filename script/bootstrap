@@ -51,14 +51,14 @@ homebrew() {
     info "homebrew already installed"
   fi
 
-  brew bundle check --global
+  brew bundle check --global >> /dev/null
   if [ $? -ne 0 ]; then
     info 'Install `brew` dependencies...'
     brew bundle --global -v
 
     success "success Install `brew` dependencies"
   else
-    info '`brew` dependencies are satisfied'
+    success '`brew` dependencies are satisfied'
   fi
 }
 
