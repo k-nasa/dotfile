@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # PATH軍団
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
@@ -17,6 +17,7 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
 export PATH=$HOME/.composer/vendor/bin:$PATH
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=$HOME/.wantedly/bin:$PATH
 export PATH=$HOME/flutter/bin:$PATH
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.local/bin

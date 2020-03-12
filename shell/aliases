@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 #
 #エイリアスの設定
 
@@ -36,9 +36,10 @@ alias gsw='git branch | fzf --height 20% | xargs git checkout'
 
 alias push=push
 alias pull=pull
+alias addpath=addpath
 alias mkcd=mkcd
 
-function pull {
+function pull() {
   remote=$1;
   pull_command="git pull ${remote:-origin} HEAD";
 
