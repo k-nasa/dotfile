@@ -1,0 +1,17 @@
+name: Test Bootstrap
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: [macos-latest]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run bootstrap
+      run: ./script/bootstrap
