@@ -1,0 +1,52 @@
+#!/bin/bash
+#
+# bootstrap
+
+make_links() {
+  # 各種ファイルのシンボリックリンクを貼る
+  ln -sf .dotfile/nvim ~/.config/nvim
+
+  DOTFILES="""
+    shell/.zshrc
+    shell/.zprofile
+    shell/paths
+    shell/aliases
+    git/.gitignore_global
+    git/.gitconfig
+    git/.commit_template
+    """
+
+    for dotfile in $DOTFILES
+    do
+      echo "link $(pwd)/$dotfile to $HOME"
+      ln -fns $(pwd)/$dotfile $HOME
+    done
+  }
+
+homebrew() {
+  echo "check installed homebrew"
+
+  brew --version > /dev/null
+  if ! [ $? = 0 ]; then
+    echo 'brew not found. try install homebrew'
+
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  else
+    echo "homebrew installed"
+  fi
+
+  brew bundle check --global
+  if [ $? -ne 0 ]; then
+    echo 'Install `brew` dependencies...'
+    brew bundle --global -v
+  else
+    echo '`brew` dependencies are satisfied :smile:' | emojify
+  fi
+}
+
+main() {
+  make_links
+  homebrew
+}
+
+main
