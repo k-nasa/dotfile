@@ -34,3 +34,4 @@ set diffopt+=vertical
 "余分な空白削除
 autocmd BufWritePre * :FixWhitespace
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+let NERDTreeShowHidden=1
