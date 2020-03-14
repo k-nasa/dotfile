@@ -1,7 +1,7 @@
-# readme
-
-./dotfileLink.sh を実行してくれ
+# Dotfiles
 
 ```
-git config --global core.excludesfile ~/.gitignore_global
+./script/bootstrap
+# or
+make
 ```

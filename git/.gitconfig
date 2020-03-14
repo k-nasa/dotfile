@@ -5,6 +5,7 @@
   diff = auto
   status = auto
   branch = auto
+	ui = true
 [core]
   editor = nvim
 	excludesfile = ~/.gitignore_global
