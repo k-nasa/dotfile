@@ -33,11 +33,6 @@ alias gsw='git branch | fzf --height 20% | xargs git checkout'
 # function
 # ==========================================
 
-alias push=push
-alias pull=pull
-alias addpath=addpath
-alias mkcd=mkcd
-
 function pull() {
   remote=$1;
   pull_command="git pull ${remote:-origin} HEAD";
@@ -60,3 +55,12 @@ function mkcd() {
     cd $1;
 }
 
+function clone() {
+
+  if [ -z $1 ]; then
+    echo "Usage: $0 owner/repository" 1>&2
+    return
+  fi
+
+  git clone https://github.com/$1.git
+}
