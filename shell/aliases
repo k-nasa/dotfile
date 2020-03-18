@@ -56,7 +56,6 @@ function mkcd() {
 }
 
 function clone() {
-
   if [ -z $1 ]; then
     echo "Usage: $0 owner/repository" 1>&2
     return
