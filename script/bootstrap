@@ -13,7 +13,7 @@ success () {
 
 make_links() {
   # 各種ファイルのシンボリックリンクを貼る
-  ln -sf .dotfile/nvim ~/.config/nvim
+  ln -sf $(pwd)/nvim $HOME/.config/nvim
 
   DOTFILES="""
     shell/.zshrc
