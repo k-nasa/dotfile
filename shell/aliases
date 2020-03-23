@@ -9,6 +9,7 @@ alias -g C='| pbcopy'
 # shell関係のエイリアス
 # ==========================================
 alias e='exit'
+alias :q='exit' # よく打ってしまうので追加してみる
 alias reload="source $HOME/.zshrc"
 
 alias vi="nvim"
@@ -30,7 +31,7 @@ alias gcp='git cherry-pick'
 alias gsw='git branch | fzf --height 20% | xargs git checkout'
 
 # ==========================================
-# function
+# functions
 # ==========================================
 
 function pull() {
@@ -55,6 +56,7 @@ function mkcd() {
     cd $1;
 }
 
+# 時たま欲しくなるので追加
 function clone() {
   if [ -z $1 ]; then
     echo "Usage: $0 owner/repository" 1>&2
