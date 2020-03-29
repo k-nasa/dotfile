@@ -12,9 +12,9 @@ success () {
 
 
 make_links() {
-  mkdir -p $HOME/.config/nvim
+  mkdir -p $HOME/.config/
   # 各種ファイルのシンボリックリンクを貼る
-  ln -sf $(pwd)/nvim $HOME/.config/nvim
+  ln -sf $(pwd)/nvim $HOME/.config
 
   DOTFILES="""
     shell/.zshrc
@@ -87,6 +87,32 @@ setting_default_shell() {
   success "success change default shell"
 }
 
+install_python() {
+  info "install python"
+  VERSION2=2.7.17
+  VERSION3=3.8.2
+  pyenv install $VERSION2
+  pyenv install $VERSION3
+  pyenv global $VERSION3
+
+  success "success Install node"
+}
+
+install_node() {
+    info "install node"
+  VERSION=13.11.0
+  nodenv install $VERSION
+  nodenv global $VERSION
+
+  success "success Install node"
+}
+
+bootstrap_nvim() {
+	npm install -g neovim
+	pip3 install neovim
+	pip2 install neovim
+}
+
 
 main() {
   make_links
@@ -94,6 +120,10 @@ main() {
   setting_default_shell
 
   install_rustup
+  install_python
+  install_node
+
+  bootstrap_nvim
 
   success "Finished!!"
 }
