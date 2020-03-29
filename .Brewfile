@@ -9,6 +9,7 @@ brew 'nodenv'
 
 # tools
 brew "exa"
+brew "bat"
 brew "fzf"
 brew "ripgrep"
 brew "ghr"
