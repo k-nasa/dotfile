@@ -16,7 +16,3 @@
   required = true
 [commit]
   template = ~/.commit_template
-
-# This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
-[include]
-  path = ~/.netlify/helper/git-config

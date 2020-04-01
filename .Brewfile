@@ -3,23 +3,25 @@ brew "neovim"
 brew "zsh"
 
 # language env
-brew 'rbenv'
-brew 'pyenv'
 brew 'nodenv'
+brew 'pyenv'
+brew 'rbenv'
 
 # tools
-brew "exa"
 brew "bat"
+brew "cloc"
+brew "direnv"
+brew "exa"
 brew "fzf"
-brew "ripgrep"
 brew "ghr"
 brew "git"
 brew "git-lfs"
-brew "jq"
-brew "wget"
-brew "htop"
 brew "github/gh/gh"
-brew "direnv"
+brew "htop"
+brew "hub"
+brew "jq"
+brew "ripgrep"
+brew "wget"
 
 # etc
 brew "cmake"
