@@ -10,7 +10,6 @@ success () {
   printf "\r\033[2K  [  \033[00;32mOK\033[0m  ] $1\n"
 }
 
-
 make_links() {
   mkdir -p $HOME/.config/
   # 各種ファイルのシンボリックリンクを貼る
@@ -41,19 +40,17 @@ make_links() {
 homebrew() {
   info "check installed homebrew"
 
-  brew --version > /dev/null
-  if [ $? -ne 0 ]; then
+  if hash brew 2>/dev/null; then
+    info "homebrew already installed"
+  else
     info 'brew not found. try install homebrew'
 
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
     success "success install homebrew"
-  else
-    info "homebrew already installed"
   fi
 
-  brew bundle check --global >> /dev/null
-  if [ $? -ne 0 ]; then
+  if brew bundle check --global >> /dev/null; then
     info 'Install `brew` dependencies...'
     brew bundle --global -v
 
@@ -66,14 +63,13 @@ homebrew() {
 install_rustup() {
   info "check installed rustup"
 
-  rustup --version > /dev/null
-  if [ $? -ne 0 ]; then
+  if hash rustup 2>/dev/null; then
+    info "rustup already installed"
+  else
     info "install rustup"
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
     success "success Install rustup"
-  else
-    info "rustup already installed"
   fi
 
   success "finished rustup"
@@ -99,7 +95,7 @@ install_python() {
 }
 
 install_node() {
-    info "install node"
+  info "install node"
   VERSION=13.11.0
   nodenv install $VERSION
   nodenv global $VERSION
