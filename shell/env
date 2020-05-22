@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Golang関連
+export GOPATH="$HOME/go"
+export GO15VENDOREXPERIMENT=1
+
+# one darkのために追加
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+export GO111MODULE=on

@@ -26,11 +26,3 @@ export PATH=$PATH:path/to/installed/dart/bin
 export PATH=./bin:$PATH
 export PATH=/Applications/Postgres.app/Contents/Versions/10/bin:$PATH
 export PATH=~/.local/bin:$PATH
-
-# Golang関連
-export GOPATH="$HOME/go"
-export GO15VENDOREXPERIMENT=1
-
-# one darkのために追加
-export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad

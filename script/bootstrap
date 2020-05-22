@@ -20,6 +20,7 @@ make_links() {
     shell/.zprofile
     shell/paths
     shell/aliases
+    shell/env
     git/.gitignore_global
     git/.gitconfig
     git/.commit_template
