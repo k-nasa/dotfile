@@ -1,14 +1,13 @@
-source ~/.zprofile
+source ~/env
 source ~/aliases
 source ~/paths
-source ~/env
-
-# eval "$(starship init zsh)"
+source ~/.zprofile
 
 eval "$(direnv hook zsh)"
 eval "$(nodenv init -)"
+eval "$(opam env)"
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
+
 # eval `ssh-agent`
-#
-eval "$(opam env)"
+# eval "$(starship init zsh)"
