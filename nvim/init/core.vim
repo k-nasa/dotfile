@@ -21,6 +21,16 @@ endif
 
 
 " 設定開始
+call plug#begin('~/.vim/plugged')
+
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug '/usr/local/opt/fzf'
+
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
+
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
 
@@ -29,11 +39,9 @@ if dein#load_state(s:dein_dir)
   " 予め TOML ファイルを用意しておく
   let g:rc_dir    = expand("~/.config/nvim/")
   let s:toml      = g:rc_dir . '/dein.toml'
-  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
 
   " TOML を読み込み、キャッシュしておく
   call dein#load_toml(s:toml,      {'lazy': 0})
-  call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
   " 設定終了
   call dein#end()
