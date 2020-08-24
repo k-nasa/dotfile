@@ -23,11 +23,30 @@ endif
 " 設定開始
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-Plug '/usr/local/opt/fzf'
+" TODO プラグイン読み込み用のファイルを作っても良いかも
+" ===========================================================
+" core plugins
+" これがないと悲しくなるやつ
+" ===========================================================
 
+" おなじみcocちゃん
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+call hook#coc#load() " FIXME ここうまい感じvim-plugでできそう(たぶん)
+
+"ファイルツリーのやつ
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" ファイラー
+Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+
+" =====================================================
+" カラースキーム
+" =====================================================
+Plug 'tomasr/molokai'
+Plug 'joshdick/onedark.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'wadackel/vim-dogrun'
 
 call plug#end()
 
