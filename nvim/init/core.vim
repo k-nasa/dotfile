@@ -23,6 +23,10 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
+" Track the engine.
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
 " =====================================================
 " カラースキーム
 " =====================================================
@@ -30,7 +34,6 @@ Plug 'tomasr/molokai'
 Plug 'joshdick/onedark.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'wadackel/vim-dogrun'
-
 
 " =====================================================
 " neovimをすこしいい感じにするやつ
