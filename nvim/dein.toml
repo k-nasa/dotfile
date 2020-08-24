@@ -1,34 +1,3 @@
-# ===========================================================
-# core plugins
-# これがないと悲しくなるやつ
-# ===========================================================
-
-[[plugins]]
-repo = 'Shougo/dein.vim'
-
-[[plugins]]
-repo = 'Shougo/vimproc.vim'
-
-[[plugins]]
-repo = 'Shougo/context_filetype.vim'
-
-[[plugins]]
-repo = 'neoclide/coc.nvim'
-build = 'call coc#util#install()'
-branch = 'release'
-hook_add         = 'call hook#coc#load()'
-
-# ファイルツリーのやつ
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-
-# ファイラー
-[[plugins]]
-repo = '/usr/local/opt/fzf'
-
-[[plugins]]
-repo = 'junegunn/fzf.vim'
-
 # =====================================================
 # カラースキーム
 # =====================================================
