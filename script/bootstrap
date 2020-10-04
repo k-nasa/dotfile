@@ -20,6 +20,7 @@ make_links() {
     shell/.zprofile
     shell/paths
     shell/aliases
+    shell/zinit
     shell/env
     git/.gitignore_global
     git/.gitconfig
