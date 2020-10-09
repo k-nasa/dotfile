@@ -22,6 +22,7 @@ make_links() {
     shell/aliases
     shell/zinit
     shell/env
+    shell/lazy_load
     git/.gitignore_global
     git/.gitconfig
     git/.commit_template

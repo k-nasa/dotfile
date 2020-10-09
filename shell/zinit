@@ -14,16 +14,16 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit's installer chunk
 
-zinit light yous/vanilli.sh
+# zinit light yous/vanilli.sh
+
+# テーマ
+zinit light sindresorhus/pure
 
 # Additional completion definitions for Zsh
-zinit ice wait lucid; zinit load zsh-users/zsh-completions
+zinit ice wait lucid; zinit light zsh-users/zsh-completions
 
 # compinit 以降に読み込むようにロードの優先度を変更する
-zinit ice wait lucid; zinit load zsh-users/zsh-syntax-highlighting
+zinit ice wait lucid; zinit light zsh-users/zsh-syntax-highlighting
 
 # 入力補完
-zinit ice wait lucid; zinit load zsh-users/zsh-autosuggestions
-
-# zinit light mafredri/zsh-async
-zinit light sindresorhus/pure
+zinit ice wait lucid; zinit light zsh-users/zsh-autosuggestions
