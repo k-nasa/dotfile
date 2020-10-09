@@ -9,7 +9,7 @@ brew 'rbenv'
 
 # tools
 brew "bat"
-brew "cloc"
+brew "tokei"
 brew "direnv"
 brew "exa"
 brew "fzf"
@@ -18,10 +18,10 @@ brew "git"
 brew "git-lfs"
 brew "github/gh/gh"
 brew "htop"
-brew "hub"
 brew "jq"
 brew "ripgrep"
 brew "wget"
+brew "delta"
 
 # etc
 brew "cmake"

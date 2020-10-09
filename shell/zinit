@@ -25,5 +25,5 @@ zinit light zsh-users/zsh-syntax-highlighting
 # 入力補完
 zinit light zsh-users/zsh-autosuggestions
 
-zinit light mafredri/zsh-async
+# zinit light mafredri/zsh-async
 zinit light sindresorhus/pure

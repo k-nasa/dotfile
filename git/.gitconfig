@@ -5,10 +5,11 @@
   diff = auto
   status = auto
   branch = auto
-	ui = true
+  ui = true
 [core]
   editor = nvim
-	excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
+  pager = delta
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
@@ -16,3 +17,7 @@
   required = true
 [commit]
   template = ~/.commit_template
+[delta]
+  side-by-side = true
+[interactive]
+  diffFilter = delta --color-only
