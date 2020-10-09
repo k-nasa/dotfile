@@ -17,13 +17,13 @@ autoload -Uz _zinit
 zinit light yous/vanilli.sh
 
 # Additional completion definitions for Zsh
-zinit light zsh-users/zsh-completions
+zinit ice wait lucid; zinit load zsh-users/zsh-completions
 
 # compinit 以降に読み込むようにロードの優先度を変更する
-zinit light zsh-users/zsh-syntax-highlighting
+zinit ice wait lucid; zinit load zsh-users/zsh-syntax-highlighting
 
 # 入力補完
-zinit light zsh-users/zsh-autosuggestions
+zinit ice wait lucid; zinit load zsh-users/zsh-autosuggestions
 
 # zinit light mafredri/zsh-async
 zinit light sindresorhus/pure
