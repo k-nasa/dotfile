@@ -90,6 +90,9 @@ install_python() {
   info "install python"
   VERSION2=2.7.17
   VERSION3=3.8.2
+
+  brew install pyenv
+
   pyenv install $VERSION2
   pyenv install $VERSION3
   pyenv global $VERSION3
@@ -99,6 +102,9 @@ install_python() {
 
 install_node() {
   info "install node"
+
+  brew install nodenv
+
   VERSION=13.11.0
   nodenv install $VERSION
   nodenv global $VERSION
