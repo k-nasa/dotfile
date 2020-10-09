@@ -8,6 +8,3 @@ eval "$(nodenv init -)"
 eval "$(opam env)"
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
-
-# eval `ssh-agent`
-# eval "$(starship init zsh)"
