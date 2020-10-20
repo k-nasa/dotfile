@@ -22,6 +22,7 @@ brew "jq"
 brew "ripgrep"
 brew "wget"
 brew "delta"
+brew "fd"
 
 # etc
 brew "cmake"
