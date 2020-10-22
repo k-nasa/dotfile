@@ -8,9 +8,8 @@ syntax on
 " use 24-bit color
 set termguicolors
 
-if !exists('g:colors_name')
-  let g:lightline.colorscheme = 'onedark'
-  set background=dark
-  colorscheme onedark
-endif
+let g:lightline = {'colorscheme' : 'tokyonight'}
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
 
+colorscheme tokyonight

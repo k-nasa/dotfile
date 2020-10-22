@@ -34,6 +34,7 @@ Plug 'tomasr/molokai'
 Plug 'joshdick/onedark.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'wadackel/vim-dogrun'
+Plug 'ghifarit53/tokyonight-vim'
 
 " =====================================================
 " neovimをすこしいい感じにするやつ
@@ -81,7 +82,7 @@ Plug 'bronson/vim-trailing-whitespace'
 " =====================================================
 " 言語ごとのプラグイン
 " シンタックスハイライト、Linter等
-" TODO for = '言語' を書いて適用範囲を制限すること
+" TODO 'for': '言語' を書いて適用範囲を制限すること
 " =====================================================
 " Rust -----------
 Plug 'rust-lang/rust.vim', {'for': 'rust' }
