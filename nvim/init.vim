@@ -34,7 +34,7 @@ set virtualedit=block
 set diffopt+=vertical
 
 " 言語設定 これがないとclipbordに日本語文字列を格納すると文字化けしちゃう
-set lang=en_US.UTF-8
+lang en_US.UTF-8
 
 "余分な空白削除
 autocmd BufWritePre * :FixWhitespace
