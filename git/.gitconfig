@@ -7,7 +7,7 @@
   branch = auto
   ui = true
 [core]
-  editor = nvim
+  editor = vim
   excludesfile = ~/.gitignore_global
   pager = delta
 [filter "lfs"]
@@ -18,6 +18,6 @@
 [commit]
   template = ~/.commit_template
 [delta]
-  side-by-side = true
+  side-by-side = false
 [interactive]
   diffFilter = delta --color-only

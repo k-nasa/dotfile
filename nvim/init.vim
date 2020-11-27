@@ -15,6 +15,7 @@ nmap k <Plug>(accelerated_jk_gk)
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
 "スワップファイルを作らない
 set noswapfile
 "他で書き換えられたらautoloadする
@@ -31,6 +32,10 @@ set wrap
 set virtualedit=block
 "横にdiffを出すやつ
 set diffopt+=vertical
+
+" 言語設定 これがないとclipbordに日本語文字列を格納すると文字化けしちゃう
+set lang=en_US.UTF-8
+
 "余分な空白削除
 autocmd BufWritePre * :FixWhitespace
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
