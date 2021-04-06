@@ -41,6 +41,9 @@ Plug 'ghifarit53/tokyonight-vim'
 " TODO ここにプラグインを足すときは説明コメントをすること(忘れちゃうから)
 " =====================================================
 
+" vimでテストをかんたんに走らせるやつ
+Plug 'vim-test/vim-test'
+
 " 自動でカッコを付けてくれるやつ
 Plug 'mattn/vim-lexiv'
 

@@ -27,3 +27,4 @@ export PATH=./bin:$PATH
 export PATH=/Applications/Postgres.app/Contents/Versions/10/bin:$PATH
 export PATH=~/.local/bin:$PATH
 export PATH=$HOME/.poetry/bin:$PATH
+export PATH="/usr/local/opt/bison/bin:$PATH"
