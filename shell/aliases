@@ -39,7 +39,8 @@ alias bd="git branch --merged|egrep -v '\*|develop|master'|xargs git branch -d"
 
 function pull() {
   remote=$1;
-  pull_command="git pull ${remote:-origin} HEAD";
+  branch=$2;
+  pull_command="git pull ${remote:-origin} ${branch:-HEAD}";
 
   echo $pull_command;
   eval $pull_command
@@ -47,7 +48,8 @@ function pull() {
 
 function push {
   remote=$1;
-  push_command="git push ${remote:-origin} HEAD";
+  branch=$2;
+  push_command="git push ${remote:-origin} ${branch-HEAD}";
 
   echo $push_command;
   eval $push_command;
