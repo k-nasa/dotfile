@@ -49,7 +49,7 @@ function pull() {
 function push {
   remote=$1;
   branch=$2;
-  push_command="git push ${remote:-origin} ${branch-HEAD}";
+  push_command="git push ${remote:-origin} ${branch:-HEAD}";
 
   echo $push_command;
   eval $push_command;
