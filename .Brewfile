@@ -13,6 +13,7 @@ brew 'google-japanese-ime'
 brew 'visual-studio-code'
 brew 'docker'
 brew 'slack'
+brew 'iterm2'
 
 # tools
 brew "bat"
