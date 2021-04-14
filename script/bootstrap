@@ -2,12 +2,23 @@
 #
 # bootstrap
 
+big_info() {
+  printf "\e[34m
+==============================
+$1
+==============================\n\e[m"
+}
+
 info () {
   printf "\r  [ \033[00;34mINFO\033[0m ] $1\n"
 }
 
 success () {
   printf "\r\033[2K  [  \033[00;32mOK\033[0m  ] $1\n"
+}
+
+error() {
+  printf "[\033[00;31mERROR\033[0m] $1\n"
 }
 
 make_links() {
@@ -119,17 +130,45 @@ bootstrap_nvim() {
 	pip2 install neovim
 }
 
+install_golang() {
+  info "DOTO implement install_golang"
+}
+
+command_check() {
+  if type $1 > /dev/null 2>&1; then
+    success "$1"
+  else
+    error "$1"
+  fi
+}
+
+check() {
+  big_info "install checking!"
+
+  COMMANDS=(brew rustup python node go nvim zsh)
+
+  for c in ${COMMANDS[@]}; do
+    command_check $c
+  done
+}
+
 
 main() {
+  big_info "start bootstrap!!"
+
   make_links
   homebrew
   setting_default_shell
 
+  big_info "install languages"
   install_rustup
   install_python
   install_node
+  install_golang
 
   bootstrap_nvim
+
+  check
 
   success "Finished!!"
 }
