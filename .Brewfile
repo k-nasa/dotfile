@@ -7,13 +7,13 @@ brew 'nodenv'
 brew 'pyenv'
 brew 'rbenv'
 
-# softwares
-brew 'google-chrome'
-brew 'google-japanese-ime'
-brew 'visual-studio-code'
-brew 'docker'
-brew 'slack'
-brew 'iterm2'
+# casks
+cask 'google-chrome'
+cask 'google-japanese-ime'
+cask 'visual-studio-code'
+cask 'docker'
+cask 'slack'
+cask 'iterm2'
 
 # tools
 brew "bat"
