@@ -13,7 +13,7 @@ call plug#begin('~/.vim/plugged')
 " ===========================================================
 
 " おなじみcocちゃん
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 call hook#coc#load() " FIXME ここうまい感じvim-plugでできそう(たぶん)
 
 "ファイルツリーのやつ
@@ -48,7 +48,7 @@ Plug 'vim-test/vim-test'
 Plug 'mattn/vim-lexiv'
 
 " wakatimeを使ってコーディング時間を見る
-Plug 'wakatime/vim-wakatime'
+" Plug 'wakatime/vim-wakatime'
 
 " vimの行横に+や-で差分を表示してくれる．
 Plug 'airblade/vim-gitgutter'
