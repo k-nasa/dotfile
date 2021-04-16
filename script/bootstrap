@@ -66,12 +66,12 @@ homebrew() {
   fi
 
   if brew bundle check --global >> /dev/null; then
+    success '`brew` dependencies are satisfied'
+  else
     info 'Install `brew` dependencies...'
     brew bundle --global -v
 
     success "success Install `brew` dependencies"
-  else
-    success '`brew` dependencies are satisfied'
   fi
 }
 
@@ -124,10 +124,23 @@ install_node() {
   success "success Install node"
 }
 
+install_ruby() {
+  info "install node"
+
+  brew install rbenv
+
+  VERSION=2.7.2
+  rbenv install $VERSION
+  rbenv global $VERSION
+
+  success "success Install node"
+
+}
+
 bootstrap_nvim() {
 	npm install -g neovim
+
 	pip3 install neovim
-	pip2 install neovim
 }
 
 install_golang() {
