@@ -11,7 +11,16 @@ jobs:
 
     runs-on: [macos-latest]
 
+
     steps:
     - uses: actions/checkout@v2
+
+    - name: Cleanup macOS
+      run: |
+        echo y | sudo ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+        sudo rm -rf /Applications/Xcode.app \
+        /Library/Developer/CommandLineTools
+        sudo xcode-select --reset
+
     - name: Run bootstrap
       run: ./script/bootstrap
