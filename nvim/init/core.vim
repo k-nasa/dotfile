@@ -13,8 +13,8 @@ call plug#begin('~/.vim/plugged')
 " ===========================================================
 
 " おなじみcocちゃん
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-call hook#coc#load() " FIXME ここうまい感じvim-plugでできそう(たぶん)
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
 
 "ファイルツリーのやつ
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
