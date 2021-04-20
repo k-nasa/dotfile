@@ -65,14 +65,10 @@ homebrew() {
     success "success install homebrew"
   fi
 
-  if brew bundle check --global >> /dev/null; then
-    success '`brew` dependencies are satisfied'
-  else
-    info 'Install `brew` dependencies...'
-    brew bundle --global -v
+  info 'Install `brew` dependencies...'
+  brew bundle --global -v -f
 
-    success "success Install `brew` dependencies"
-  fi
+  success "success Install `brew` dependencies"
 }
 
 install_rustup() {
@@ -88,14 +84,6 @@ install_rustup() {
   fi
 
   success "finished rustup"
-}
-
-setting_default_shell() {
-  info "change default shell to zsh"
-
-  chsh -s /usr/local/bin/zsh
-
-  success "success change default shell"
 }
 
 install_python() {
@@ -147,31 +135,12 @@ install_golang() {
   info "DOTO implement install_golang"
 }
 
-command_check() {
-  if type $1 > /dev/null 2>&1; then
-    success "$1"
-  else
-    error "$1"
-  fi
-}
-
-check() {
-  big_info "install checking!"
-
-  COMMANDS=(brew rustup python node go nvim zsh)
-
-  for c in ${COMMANDS[@]}; do
-    command_check $c
-  done
-}
-
 
 main() {
   big_info "start bootstrap!!"
 
   make_links
   homebrew
-  setting_default_shell
 
   big_info "install languages"
   install_rustup
@@ -181,7 +150,6 @@ main() {
 
   bootstrap_nvim
 
-  check
 
   success "Finished!!"
 }

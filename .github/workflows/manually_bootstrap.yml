@@ -1,0 +1,21 @@
+name: Manually exec ./script/bootstrap
+on: workflow_dispatch
+
+jobs:
+  ssh:
+    runs-on: [macos-latest]
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Uninstall HomeBrew
+      run: echo y | sudo ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+
+    - name: Cleanup macOS
+      run: |
+        sudo rm -rf /Applications/Xcode.app \
+        /Library/Developer/CommandLineTools
+        sudo xcode-select --reset
+
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
+      timeout-minutes: 30
