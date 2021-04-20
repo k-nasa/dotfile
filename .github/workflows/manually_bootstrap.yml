@@ -7,9 +7,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: Uninstall HomeBrew
-      run: echo y | sudo ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
-
+    # - name: Uninstall HomeBrew
+    #   run: echo y | sudo ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+    #
     - name: Cleanup macOS
       run: |
         sudo rm -rf /Applications/Xcode.app \
