@@ -65,14 +65,10 @@ homebrew() {
     success "success install homebrew"
   fi
 
-  if brew bundle check --global >> /dev/null; then
-    info 'Install `brew` dependencies...'
-    brew bundle --global -v
+  info 'Install `brew` dependencies...'
+  brew bundle --global -v -f
 
-    success "success Install `brew` dependencies"
-  else
-    success '`brew` dependencies are satisfied'
-  fi
+  success "success Install `brew` dependencies"
 }
 
 install_rustup() {
@@ -88,14 +84,6 @@ install_rustup() {
   fi
 
   success "finished rustup"
-}
-
-setting_default_shell() {
-  info "change default shell to zsh"
-
-  chsh -s /usr/local/bin/zsh
-
-  success "success change default shell"
 }
 
 install_python() {
@@ -158,7 +146,6 @@ main() {
 
   make_links
   homebrew
-  setting_default_shell
 
   big_info "install languages"
   install_rustup
