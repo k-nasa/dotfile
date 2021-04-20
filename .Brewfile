@@ -34,7 +34,6 @@ tap "k-nasa/homebrew-rmemo"
 brew "rmemo"
 
 # softwares
-cask "google-chrome"
 cask "google-japanese-ime"
 cask "visual-studio-code"
 cask "docker"
