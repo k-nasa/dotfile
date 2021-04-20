@@ -112,10 +112,23 @@ install_node() {
   success "success Install node"
 }
 
+install_ruby() {
+  info "install node"
+
+  brew install rbenv
+
+  VERSION=2.7.2
+  rbenv install $VERSION
+  rbenv global $VERSION
+
+  success "success Install node"
+
+}
+
 bootstrap_nvim() {
 	npm install -g neovim
+
 	pip3 install neovim
-	pip2 install neovim
 }
 
 install_golang() {

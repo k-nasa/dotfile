@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # PATH軍団
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.nodenv/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -9,7 +9,7 @@ export PATH="$PATH":"$HOME/flutter/.pub-cache/bin"
 export PATH="$PATH":"$HOME/flutter/cache/dart-sdk/bin"
 export PATH="$PATH":"~/.pub-cache/bin"
 export PATH="$PATH:/Users/asan/.cargo/bin"
-export PATH="/usr/local/Cellar/git/2.22.0_1/bin:$PATH"
+export PATH="/usr/local/Cellar/git/2.31.1:$PATH"
 export PATH="/usr/local/opt/binutils/bin:$PATH"
 export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"

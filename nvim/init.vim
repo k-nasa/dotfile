@@ -40,3 +40,26 @@ lang en_US.UTF-8
 autocmd BufWritePre * :FixWhitespace
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 let NERDTreeShowHidden=1
+
+lua << EOF
+    local on_attach = function (client, bufnr)
+        vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true, silent = true})
+        vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
+        vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {noremap = true, silent = true})
+        require('completion').on_attach(client)
+    end
+
+    require'lspconfig'.rust_analyzer.setup({on_attach = on_attach})
+    require'lspconfig'.solargraph.setup{}
+    require'lspconfig'.gopls.setup{}
+EOF
+
+" Use <Tab> and <S-Tab> to navigate through popup menu
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+
+" Avoid showing message extra message when using completion
+set shortmess+=c
