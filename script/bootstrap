@@ -71,6 +71,10 @@ homebrew() {
   success "success Install `brew` dependencies"
 }
 
+switch_to_zsh() {
+  zsh
+}
+
 install_rustup() {
   info "check installed rustup"
 
@@ -149,7 +153,6 @@ main() {
   install_golang
 
   bootstrap_nvim
-
 
   success "Finished!!"
 }

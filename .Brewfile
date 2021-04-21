@@ -21,7 +21,7 @@ brew "htop"
 brew "jq"
 brew "ripgrep"
 brew "wget"
-brew "delta"
+brew "git-delta"
 brew "fd"
 
 # etc

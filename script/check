@@ -30,7 +30,7 @@ command_check() {
 check() {
   big_info "install checking!"
 
-  COMMANDS=(brew rustup python node go nvim zsh)
+  COMMANDS=(brew rustup python node nvim zsh docker rbenv pyenv nodenv)
 
   for c in ${COMMANDS[@]}; do
     command_check $c
