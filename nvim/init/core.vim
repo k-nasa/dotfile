@@ -15,11 +15,13 @@ call plug#begin('~/.vim/plugged')
 " おなじみcocちゃん
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
+set completeopt=menuone,noinsert,noselect
+set shortmess+=c
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_ignore_case = 1
-Plug 'Shougo/neco-syntax' " general
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_ignore_case = 1
+" Plug 'Shougo/neco-syntax' " general
 
 "ファイルツリーのやつ
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }

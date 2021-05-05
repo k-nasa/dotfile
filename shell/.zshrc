@@ -17,3 +17,11 @@ eval "$(rbenv init -)"
 
 # added by travis gem
 [ ! -s /Users/nasa/.travis/travis.sh ] || source /Users/nasa/.travis/travis.sh
+
+# Wasmer
+export WASMER_DIR="/Users/wantedly333/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+export WASMTIME_HOME="$HOME/.wasmtime"
+
+export PATH="$WASMTIME_HOME/bin:$PATH"
