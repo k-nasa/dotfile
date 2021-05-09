@@ -17,7 +17,7 @@ autoload -Uz _zinit
 # zinit light yous/vanilli.sh
 
 # テーマ
-zinit light sindresorhus/pure
+# zinit light sindresorhus/pure
 
 # Additional completion definitions for Zsh
 zinit ice wait lucid; zinit light zsh-users/zsh-completions

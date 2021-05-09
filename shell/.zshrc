@@ -9,6 +9,7 @@ source ~/env
 source ~/aliases
 source ~/paths
 source ~/secret_env # NOTE このファイルはコミットしない
+source ~/prompt
 
 eval "$(direnv hook zsh)"
 source <(nodenv init -)

@@ -33,6 +33,7 @@ make_links() {
     shell/aliases
     shell/zinit
     shell/env
+    shell/prompt
     shell/lazy_load
     shell/secret_env
     git/.gitignore_global
