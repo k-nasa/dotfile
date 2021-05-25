@@ -17,6 +17,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 set completeopt=menuone,noinsert,noselect
 set shortmess+=c
+let g:completion_enable_snippet = 'UltiSnips'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_at_startup = 1
@@ -32,6 +33,11 @@ Plug 'junegunn/fzf.vim'
 " Track the engine.
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
 
 " =====================================================
 " カラースキーム
