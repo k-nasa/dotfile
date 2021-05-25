@@ -27,7 +27,7 @@ let g:deoplete#enable_ignore_case = 1
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " ファイラー
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Track the engine.
