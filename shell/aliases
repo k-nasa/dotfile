@@ -65,6 +65,10 @@ function clone() {
   git clone https://github.com/$1.git
 }
 
+function cdf() {
+  cd $(fd --type d | fzf)
+}
+
 function fzf-history() {
   BUFFER=$(history -n -r 1 | sort | uniq | fzf)
   CURSOR=$#BUFFER
