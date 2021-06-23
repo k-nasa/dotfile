@@ -19,6 +19,7 @@ _prompt_git_info() {
 
   local -a DIVERGENCES
   local -a FLAGS
+  local -a KUBE
 
   local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ')"
   if [ "$NUM_AHEAD" -gt 0 ]; then
@@ -52,13 +53,17 @@ _prompt_git_info() {
     FLAGS+=( "$MERGING" )
   fi
 
+  if [ -n "${KUBE_FORK_TARGET_ENV}" ]; then
+    KUBE+="${line_1}  %{$fg[yellow]%}(fork: ${KUBE_FORK_TARGET_ENV})%{$reset_color%}"
+  fi
+
   local -a GIT_INFO
   GIT_INFO+=( "%{$fg[grey]%}-" )
   [ -n "$GIT_STATUS" ] && GIT_INFO+=( "$GIT_STATUS" )
   [[ ${#DIVERGENCES[@]} -ne 0 ]] && GIT_INFO+=( "${(j::)DIVERGENCES}" )
   [[ ${#FLAGS[@]} -ne 0 ]] && GIT_INFO+=( "${(j::)FLAGS}" )
   GIT_INFO+=( "%{$fg_bold[grey]%}$GIT_LOCATION%{$reset_color%}" )
-  echo "${(j: :)GIT_INFO}"
+  echo "${(j: :)GIT_INFO} ${KUBE}"
 }
 
 _update_prompt() {
