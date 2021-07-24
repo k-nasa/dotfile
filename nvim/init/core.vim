@@ -19,7 +19,7 @@ set completeopt=menuone,noinsert,noselect
 set shortmess+=c
 let g:completion_enable_snippet = 'UltiSnips'
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_ignore_case = 1
 

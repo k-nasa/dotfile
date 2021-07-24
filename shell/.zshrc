@@ -17,9 +17,14 @@ source ~/prompt
 export SAVEHIST=100000
 
 eval "$(direnv hook zsh)"
+eval "$(pyenv init --path)"
 source <(nodenv init -)
-source <(pyenv init -)
 eval "$(rbenv init -)"
 
 # added by travis gem
 [ ! -s /Users/nasa/.travis/travis.sh ] || source /Users/nasa/.travis/travis.sh
+
+# Wasmer
+export WASMER_DIR="/Users/asan/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
