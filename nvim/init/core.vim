@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
 
 " おなじみcocちゃん
 Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
 Plug 'nvim-lua/completion-nvim'
 set completeopt=menuone,noinsert,noselect
 set shortmess+=c
