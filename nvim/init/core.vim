@@ -12,13 +12,13 @@ call plug#begin('~/.vim/plugged')
 " これがないと悲しくなるやつ
 " ===========================================================
 
-" おなじみcocちゃん
 Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-compe'
 
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_ignore_case = 1
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
 
 "ファイルツリーのやつ
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -30,6 +30,8 @@ Plug 'junegunn/fzf.vim'
 " Track the engine.
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
