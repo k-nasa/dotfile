@@ -8,3 +8,6 @@ export GO111MODULE=on
 # one darkのために追加
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
+
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"

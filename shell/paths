@@ -10,7 +10,7 @@ export PATH="$PATH":"$HOME/flutter/cache/dart-sdk/bin"
 export PATH="$PATH":"~/.pub-cache/bin"
 export PATH="$PATH:/Users/asan/.cargo/bin"
 export PATH="/usr/local/Cellar/git/2.31.1:$PATH"
-export PATH="/usr/local/opt/binutils/bin:$PATH"
+# export PATH="/usr/local/opt/binutils/bin:$PATH"
 export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
@@ -29,3 +29,7 @@ export PATH=~/.local/bin:$PATH
 export PATH=$HOME/.poetry/bin:$PATH
 export PATH="/usr/local/opt/bison/bin:$PATH"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH=/opt/homebrew/sbin:/opt/homebrew/opt/binutils/bin:$PATH
+
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"

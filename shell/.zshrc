@@ -28,3 +28,4 @@ eval "$(rbenv init -)"
 export WASMER_DIR="/Users/asan/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
 
+export PATH="${HOME}/.fluvio/bin:${PATH}"
