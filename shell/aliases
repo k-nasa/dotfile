@@ -75,3 +75,16 @@ function fzf-history() {
 }
 zle     -N   fzf-history
 bindkey '^R' fzf-history
+
+
+function open-memo() {
+  FILE_PATH=/Users/asan/lab/memo/memo.md
+
+  local day=$(date +'# %Y/%m/%d')
+  local header=$(head -n 1 ${FILE_PATH})
+  if [ "$header" != $day ]; then
+    echo -e "$day\n\n$(cat ${FILE_PATH})" > $FILE_PATH
+  fi
+  vi $FILE_PATH
+}
+alias m=open-memo
