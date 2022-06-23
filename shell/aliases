@@ -88,3 +88,8 @@ function open-memo() {
   vi $FILE_PATH
 }
 alias m=open-memo
+
+function open-lifemd() {
+  open https://github.com/k-nasa/memo/blob/main/my_life.md
+}
+alias life=open-lifemd

@@ -6,7 +6,6 @@
 " 設定開始
 call plug#begin('~/.vim/plugged')
 
-" TODO プラグイン読み込み用のファイルを作っても良いかも
 " ===========================================================
 " core plugins
 " これがないと悲しくなるやつ
@@ -64,7 +63,8 @@ Plug 'mattn/vim-lexiv'
 " vimの行横に+や-で差分を表示してくれる．
 Plug 'airblade/vim-gitgutter'
 
-Plug 'hoshinotsuyoshi/vim-to-github'
+" :ToGithubでgithub上でコードが開ける
+Plug 'tonchis/vim-to-github'
 
 " コメントON/OFFを手軽に実行 ON/OFFはCtrl+-を二回
 Plug 'tomtom/tcomment_vim'
@@ -78,6 +78,9 @@ Plug 'rhysd/accelerated-jk'
 " 検索終了後にハイライトを消す
 Plug 'romainl/vim-cool'
 let g:CoolTotalMatches = 1
+
+" github copilot
+Plug 'github/copilot.vim', { 'branch': 'release' }
 
 " vim起動画面を変更する
 Plug 'mhinz/vim-startify'
