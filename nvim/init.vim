@@ -46,7 +46,7 @@ let NERDTreeShowHidden=1
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-" " 補完が効くようになるらしい。とりあえず入れてみるぞい
+" 補完が効くようになるらしい
 autocmd FileType go setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
 set completeopt=menu,menuone,noselect
