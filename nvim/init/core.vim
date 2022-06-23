@@ -13,11 +13,11 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'neovim/nvim-lspconfig'
 
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp', { 'branch': 'main' }
+Plug 'hrsh7th/cmp-buffer', { 'branch': 'main' }
+Plug 'hrsh7th/cmp-path', { 'branch': 'main' }
+Plug 'hrsh7th/cmp-cmdline', { 'branch': 'main' }
+Plug 'hrsh7th/nvim-cmp', { 'branch': 'main' }
 
 "ファイルツリーのやつ
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -113,11 +113,11 @@ Plug 'fishbullet/deoplete-ruby', { 'for': 'ruby' }
 Plug 'tpope/vim-endwise', { 'for': 'ruby' }
 
 " golang用 --------------------
-Plug  'fatih/vim-go', { 'for': 'go' }
-let g:go_fmt_command = "goimports"
+" Plug  'fatih/vim-go', { 'for': 'go' }
+" let g:go_fmt_command = "goimports"
 
-let g:go_def_mapping_enabled = 0
-let g:go_doc_keywordprg_enabled = 0
+" let g:go_def_mapping_enabled = 0
+" let g:go_doc_keywordprg_enabled = 0
 
 " # show statusbar
 set laststatus=2
