@@ -55,7 +55,6 @@ for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach }
 end
 
-
 function goimports(timeout_ms)
     local context = { only = { "source.organizeImports" } }
     vim.validate { context = { context, "t", true } }
@@ -87,4 +86,4 @@ function goimports(timeout_ms)
   end
 EOF
 
-autocmd BufWritePre *.go lua goimports(1000)
+autocmd BufWritePre *.go lua goimports(100)
