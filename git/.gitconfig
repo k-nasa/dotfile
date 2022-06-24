@@ -21,3 +21,6 @@
   side-by-side = false
 [interactive]
   diffFilter = delta --color-only
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
