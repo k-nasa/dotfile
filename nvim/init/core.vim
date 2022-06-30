@@ -29,8 +29,7 @@ Plug 'junegunn/fzf.vim'
 " Track the engine.
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'quangnguyen30192/cmp-nvim-ultisnips'
-
+Plug 'quangnguyen30192/cmp-nvim-ultisnips', {'branch': 'main'}
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -111,13 +110,6 @@ Plug 'fishbullet/deoplete-ruby', { 'for': 'ruby' }
 
 " endを自動で入れてくれるやる
 Plug 'tpope/vim-endwise', { 'for': 'ruby' }
-
-" golang用 --------------------
-" Plug  'fatih/vim-go', { 'for': 'go' }
-" let g:go_fmt_command = "goimports"
-
-" let g:go_def_mapping_enabled = 0
-" let g:go_doc_keywordprg_enabled = 0
 
 " # show statusbar
 set laststatus=2
