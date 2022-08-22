@@ -13,11 +13,11 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'neovim/nvim-lspconfig'
 
-Plug 'hrsh7th/cmp-nvim-lsp', { 'branch': 'main' }
-Plug 'hrsh7th/cmp-buffer', { 'branch': 'main' }
-Plug 'hrsh7th/cmp-path', { 'branch': 'main' }
-Plug 'hrsh7th/cmp-cmdline', { 'branch': 'main' }
-Plug 'hrsh7th/nvim-cmp', { 'branch': 'main' }
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
 
 "ファイルツリーのやつ
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -29,7 +29,7 @@ Plug 'junegunn/fzf.vim'
 " Track the engine.
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'quangnguyen30192/cmp-nvim-ultisnips', {'branch': 'main'}
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -104,6 +104,9 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'rust-lang/rust.vim', {'for': 'rust' }
 let g:rustfmt_autosave = 1
 let g:rustfmt_command = '$HOME/.cargo/bin/rustfmt'
+
+" zig -----------
+ Plug 'ziglang/zig.vim'
 
 " ruby用 ---------
 Plug 'fishbullet/deoplete-ruby', { 'for': 'ruby' }
