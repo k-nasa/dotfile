@@ -79,7 +79,7 @@ bindkey '^R' fzf-history
 
 
 function open-memo() {
-  FILE_PATH=/Users/asan/lab/memo/memo.md
+  FILE_PATH=$MEMO_FILEPATH
 
   local day=$(date +'# %Y/%m/%d')
   local header=$(head -n 1 ${FILE_PATH})

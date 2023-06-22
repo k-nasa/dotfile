@@ -86,6 +86,3 @@ function OrgImports(wait_ms)
   end
 end
 EOF
-
-autocmd BufWritePre *.go lua OrgImports(1000)
-autocmd BufWritePost *.go lua vim.lsp.buf.formatting()
