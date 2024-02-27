@@ -12,8 +12,8 @@ alias e='exit'
 alias :q='exit' # よく打ってしまうので追加してみる
 alias reload="source $HOME/.zshrc"
 
-alias vi="nvim"
-alias ls='exa'
+alias vi='nvim'
+# alias ls='exa'
 alias l='ls'
 alias la='ls -all'
 
