@@ -1,0 +1,41 @@
+[
+    {
+        "key": "ctrl+w s",
+        "command": "workbench.action.splitEditor",
+        "when": "editorTextFocus && vim.active && vim.mode == 'Normal'",
+    },
+    {
+        "key": "ctrl+w v",
+        "command": "workbench.action.splitEditorDown",
+        "when": "editorTextFocus && vim.active && vim.mode == 'Normal'",
+    },
+    {
+        "key": "ctrl+w h",
+        "command": "workbench.action.navigateLeft",
+        "when": "vim.active && vim.mode == 'Normal'",
+    },
+    {
+        "key": "ctrl+w l",
+        "command": "workbench.action.navigateRight",
+        "when": "vim.active && vim.mode == 'Normal'",
+    },
+    {
+        "key": "ctrl+w k",
+        "command": "workbench.action.navigateUp",
+        "when": "vim.active && vim.mode == 'Normal'",
+    },
+    {
+        "key": "ctrl+w j",
+        "command": "workbench.action.navigateDown",
+        "when": "vim.active && vim.mode == 'Normal'",
+    },
+    {
+        "key": "ctrl+w t",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "ctrl+w n",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+]

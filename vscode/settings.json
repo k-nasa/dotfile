@@ -1,0 +1,57 @@
+{
+  "editor.fontFamily": "'Monaspace Neon', monospace",
+  "editor.fontLigatures": "'ss04', 'ss06', 'ss07', 'ss08'",
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  "vim.useSystemClipboard": true,
+  "git.openRepositoryInParentFolders": "never",
+  "go.toolsManagement.autoUpdate": true,
+  "vim.insertModeKeyBindingsNonRecursive": [],
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "workbench.startupEditor": "none",
+  "remote.SSH.defaultExtensions": [
+    "ms-python.black-formatter",
+    "ms-python.flake8",
+    "github.copilot",
+    "github.copilot-chat",
+    "ms-toolsai.jupyter"
+  ],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.env.osx": {},
+  "editor.linkedEditing": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "github.copilot.enable": {
+    "markdown": "true"
+  },
+  "rubyLsp.enableExperimentalFeatures": true,
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "editor.rulers": [
+      120
+    ],
+    "editor.semanticHighlighting.enabled": true
+  },
+  "workbench.colorTheme": "Spinel",
+  "console-ninja.featureSet": "Community",
+  "html.autoClosingTags": false,
+  "go.formatTool": "goimports",
+}
