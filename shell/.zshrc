@@ -17,12 +17,8 @@ source ~/prompt
 export SAVEHIST=100000
 
 eval "$(direnv hook zsh)"
-eval "$(pyenv init --path)"
-source <(nodenv init -)
-eval "$(rbenv init -)"
 eval "$(~/.local/bin/mise activate zsh)"
 
 # Wasmer
 export WASMER_DIR="/Users/asan/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
-

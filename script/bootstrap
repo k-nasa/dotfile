@@ -25,6 +25,7 @@ make_links() {
   mkdir -p $HOME/.config/
   # 各種ファイルのシンボリックリンクを貼る
   ln -sf $(pwd)/nvim $HOME/.config
+  ln -sf $(pwd)/mise $HOME/.config
 
   DOTFILES="""
     shell/.zshrc
