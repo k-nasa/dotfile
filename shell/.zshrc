@@ -17,6 +17,7 @@ source ~/prompt
 export SAVEHIST=100000
 
 eval "$(direnv hook zsh)"
+eval "$(/opt/homebrew/bin/rbenv init - zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
 
 # Wasmer

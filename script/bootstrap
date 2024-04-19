@@ -62,7 +62,7 @@ homebrew() {
   else
     info 'brew not found. try install homebrew'
 
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     success "success install homebrew"
   fi
