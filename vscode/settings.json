@@ -1,7 +1,5 @@
 {
-  "editor.fontFamily": "'Monaspace Neon', monospace",
   "editor.fontLigatures": "'ss04', 'ss06', 'ss07', 'ss08'",
-  "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
   "vim.useSystemClipboard": true,
   "git.openRepositoryInParentFolders": "never",
@@ -33,7 +31,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "github.copilot.enable": {
-    "markdown": "true"
+    "markdown": true,
   },
   "rubyLsp.enableExperimentalFeatures": true,
   "[ruby]": {
@@ -50,8 +48,28 @@
     ],
     "editor.semanticHighlighting.enabled": true
   },
-  "workbench.colorTheme": "Spinel",
+  "workbench.colorTheme": "GitHub Dark",
   "console-ninja.featureSet": "Community",
   "html.autoClosingTags": false,
   "go.formatTool": "goimports",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "editor.fontSize": 14,
+  "workbench.editorAssociations": {
+    "*.gif": "hexEditor.hexedit"
+  },
+  "editor.fontFamily": "monospace, Menlo, Monaco, 'Courier New'",
+  "editor.renderWhitespace": "trailing",
+  "editor.wordWrap": "on",
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.stickyScroll.enabled": false,
+  "workbench.activityBar.location": "hidden",
+  "editor.minimap.enabled": false,
+  "editor.glyphMargin": false,
+  "workbench.statusBar.visible": false,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.minimap.autohide": true,
 }
