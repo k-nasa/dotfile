@@ -7,11 +7,11 @@ setopt correct
 setopt hist_reduce_blanks
 setopt hist_ignore_all_dups
 
+source ~/secret_env # NOTE このファイルはコミットしない
 source ~/zinit
 source ~/env
 source ~/aliases
 source ~/paths
-source ~/secret_env # NOTE このファイルはコミットしない
 source ~/prompt
 
 export SAVEHIST=100000
