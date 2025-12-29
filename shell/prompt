@@ -58,11 +58,11 @@ _prompt_git_info() {
   fi
 
   local -a GIT_INFO
-  GIT_INFO+=( "%{$fg[grey]%}-" )
+  GIT_INFO+=( "%{$fg[blue]%}-" )
   [ -n "$GIT_STATUS" ] && GIT_INFO+=( "$GIT_STATUS" )
   [[ ${#DIVERGENCES[@]} -ne 0 ]] && GIT_INFO+=( "${(j::)DIVERGENCES}" )
   [[ ${#FLAGS[@]} -ne 0 ]] && GIT_INFO+=( "${(j::)FLAGS}" )
-  GIT_INFO+=( "%{$fg_bold[grey]%}$GIT_LOCATION%{$reset_color%}" )
+  GIT_INFO+=( "%{$fg_bold[blue]%}$GIT_LOCATION%{$reset_color%}" )
   echo "${(j: :)GIT_INFO} ${KUBE}"
 }
 
